@@ -1,5 +1,7 @@
 // fizzbuzz function
-pub fn fizzbuzz(n: i32) -> String {
+pub fn fizzbuzz(n: i32) {
+    println!("fizz buzz start!");
+
     for i in 1..n+1 {
         if i%15 == 0 {
             println!("fizzbuzz");
@@ -11,6 +13,6 @@ pub fn fizzbuzz(n: i32) -> String {
             println!("{}", i);
         }
     }
-    return "fizz buzz end!".to_string()
+    println!("fizz buzz end!");
 }
 
