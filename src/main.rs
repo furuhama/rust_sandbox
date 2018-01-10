@@ -1,35 +1,18 @@
 // use std::io;
+extern crate hello_world;
+
+use hello_world::my_module;
 
 fn main() {
-    println!("==== hello, rust! ====");
+    println!("==== hello, rust! ====\n");
 
     // println!("please input some words");
     // let mut guess = String::new();
     // io::stdin().read_line(&mut guess).expect("failed to read line");
     // println!("Input: {}", guess);
 
-    let x: i32 = 2836;
-    let y: i32 = 10;
-    println!("x: {}, y: {}", x, y);
+    println!("{}", my_module::fizzbuzz::fizzbuzz(35));
 
-    let mut count: i32 = 0;
-    loop {
-        count += 1;
-        if count % 15 == 0 {
-            println!("fizzbuzz");
-            continue;
-        } else if count % 3 == 0 {
-            println!("fizz");
-            continue;
-        } else if count % 5 == 0 {
-            println!("buzz");
-            continue;
-        } else {
-            println!("{}", count);
-        }
-
-        if count == 29 {
-            break;
-        }
-    }
+    println!("{}", my_module::fibonacci::get_fibonacci(90));
 }
+
