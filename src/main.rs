@@ -1,5 +1,6 @@
 // use std::io;
 extern crate hello_world;
+extern crate num;
 
 use hello_world::my_module;
 
