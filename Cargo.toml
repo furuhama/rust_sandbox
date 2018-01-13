@@ -7,4 +7,4 @@ authors = ["furuhama <yuuuuusuke0210@gmail.com>"]
 [dependencies]
 
 num = "0.1"
-rand = "0.4.0"
+rand = "0.4"
