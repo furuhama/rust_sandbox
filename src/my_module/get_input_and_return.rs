@@ -23,8 +23,14 @@ pub fn guess_the_number() {
             .expect("failed to read line");
             // expect は io::Result が err のときにその命令を停止して、引数の文字列を標準出力から返す
 
-        let guess: u32 = guess.trim().parse()
-            .expect("please input positive integer!!!");
+        // error handling
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => { // when input is error
+                println!("\n**** please input unsigned integer ****\n");
+                continue;
+            }
+        };
 
         println!("you guessed: {}", guess);
 
