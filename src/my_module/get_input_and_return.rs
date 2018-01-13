@@ -31,7 +31,10 @@ pub fn guess_the_number() {
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("too small!"),
             Ordering::Greater => println!("too large!"),
-            Ordering::Equal => println!("you win!"),
+            Ordering::Equal => {
+                println!("you win!");
+                break;
+            }
         }
     }
 }
