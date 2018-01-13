@@ -3,16 +3,9 @@
 extern crate rand;
 
 use std::io;
-use self::rand::Rng; // module内で外部モジュールを使う時は self::hoge とする
-
-pub fn get_and_print_input() {
-    println!("please input some words");
-    let mut guess = String::new();
-    io::stdin().read_line(&mut guess) // io::stdin().read_line(hoge) は io::Result インスタンス
-        .expect("failed to read line.");
-        // expect は io::Result が err のときにその命令を停止して、引数の文字列を標準出力から返す
-    println!("your input: {}", guess);
-}
+use std::cmp::Ordering;
+use self::rand::Rng;
+// module内で外部モジュールを extern して使う時は self::hoge とする
 
 pub fn guess_the_number() {
     println!("guess the number!");
@@ -21,12 +14,25 @@ pub fn guess_the_number() {
 
     println!("The secret number is: {}", secret_number);
 
-    println!("please input your guess");
+    loop {
+        println!("please input your guess");
 
-    let mut guess = String::new();
+        let mut guess = String::new();
 
-    io::stdin().read_line(&mut guess).expect("failed to read line");
+        io::stdin().read_line(&mut guess) // io::stdin().read_line(hoge) は io::Result インスタンス
+            .expect("failed to read line");
+            // expect は io::Result が err のときにその命令を停止して、引数の文字列を標準出力から返す
 
-    println!("you guessed: {}", guess);
+        let guess: u32 = guess.trim().parse()
+            .expect("please input positive integer!!!");
+
+        println!("you guessed: {}", guess);
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("too small!"),
+            Ordering::Greater => println!("too large!"),
+            Ordering::Equal => println!("you win!"),
+        }
+    }
 }
 
