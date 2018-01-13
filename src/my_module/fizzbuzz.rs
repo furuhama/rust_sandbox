@@ -1,4 +1,5 @@
 // fizzbuzz function
+
 pub fn fizzbuzz(n: i32) {
     println!("fizz buzz start!");
 
