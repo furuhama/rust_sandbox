@@ -24,5 +24,11 @@ fn main() {
     let hoge = hoge * 2;
     let hoge = hoge + 12;
     println!("{}", hoge);
+
+    let spaces = "   ";
+    let spaces = spaces.len();
+
+    let mut space = "    ";
+    space = spaces.len()
 }
 
