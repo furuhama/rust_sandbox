@@ -18,7 +18,11 @@ fn main() {
     println!("{}", x);
 
     const MAX_POINTS: u32 = 100_000;
-
     println!("{}", MAX_POINTS);
+
+    let hoge = 10;
+    let hoge = hoge * 2;
+    let hoge = hoge + 12;
+    println!("{}", hoge);
 }
 
