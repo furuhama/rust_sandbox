@@ -9,6 +9,7 @@ pub use self::get_input_and_return::guess_the_number;
 pub use self::basic_concepts::run_basic_concepts;
 pub use self::basic_functions::basic_functions;
 pub use self::condition_control::condition_controller;
+pub use self::ownership::practice_ownership;
 
 // call mod files
 mod fibonacci;
@@ -18,4 +19,5 @@ mod get_input_and_return;
 mod basic_concepts;
 mod basic_functions;
 mod condition_control;
+mod ownership;
 

@@ -17,6 +17,8 @@ fn main() {
 
     // my_module::basic_functions();
 
-    my_module::condition_controller();
+    // my_module::condition_controller();
+
+    my_module::practice_ownership();
 }
 
