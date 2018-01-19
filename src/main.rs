@@ -9,8 +9,9 @@ fn main() {
 
     // my_module::fizzbuzz(35);
 
-    // let n: i32 = 90;
-    // println!("{}th fibonacci number: {}", n, my_module::get_fibonacci(n));
+    let n: i32 = 90;
+    println!("{}th fibonacci number: {}", n, my_module::get_fibonacci(n));
+    println!("{}th fibonacci number(tuple): {}", n, my_module::get_fibonacci_tuple(n));
 
     my_module::run_basic_concepts();
 }
