@@ -36,5 +36,9 @@ pub fn run_basic_concepts() {
     let tup: (i32, i32, i32) = (10, 50, 64);
     let (tup_1, tup_2, tup_3) = tup;
     println!("tuple values: {}, {}, {}", tup_1, tup_2, tup_3);
+
+    // Array
+    let arr = [1, 2, 3, 4, 5, 6];
+    println!("{}", arr[0]);
 }
 
