@@ -12,23 +12,6 @@ fn main() {
     // let n: i32 = 90;
     // println!("{}th fibonacci number: {}", n, my_module::get_fibonacci(n));
 
-    let mut x = 5;
-    println!("{}", x);
-    x = 10;
-    println!("{}", x);
-
-    const MAX_POINTS: u32 = 100_000;
-    println!("{}", MAX_POINTS);
-
-    let hoge = 10;
-    let hoge = hoge * 2;
-    let hoge = hoge + 12;
-    println!("{}", hoge);
-
-    let spaces = "   ";
-    let spaces = spaces.len();
-
-    let mut space = "    ";
-    space = spaces.len()
+    my_module::run_basic_concepts();
 }
 
