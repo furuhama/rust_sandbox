@@ -13,6 +13,8 @@ fn main() {
     // println!("{}th fibonacci number: {}", n, my_module::get_fibonacci(n));
     // println!("{}th fibonacci number(tuple): {}", n, my_module::get_fibonacci_tuple(n));
 
-    my_module::run_basic_concepts();
+    // my_module::run_basic_concepts();
+
+    my_module::basic_functions();
 }
 
