@@ -9,8 +9,6 @@ pub fn practice_ownership() {
     // String move its ownership
     takes_ownership(s);
 
-    let x = 5;
-
     // integer makes its copy automatically
     let x = 5;
     makes_copy(x);
