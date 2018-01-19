@@ -15,6 +15,8 @@ fn main() {
 
     // my_module::run_basic_concepts();
 
-    my_module::basic_functions();
+    // my_module::basic_functions();
+
+    my_module::condition_controller();
 }
 
