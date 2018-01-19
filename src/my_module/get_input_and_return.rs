@@ -21,12 +21,13 @@ pub fn guess_the_number() {
 
         io::stdin().read_line(&mut guess) // io::stdin().read_line(hoge) は io::Result インスタンス
             .expect("failed to read line");
-            // expect は io::Result が err のときにその命令を停止して、引数の文字列を標準出力から返す
+        // expect は io::Result が err のときにその命令を停止して、引数の文字列を標準出力から返す
 
         // error handling
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
-            Err(_) => { // when input is error
+            Err(_) => {
+                // when input is error
                 println!("\n**** please input unsigned integer ****\n");
                 continue;
             }
@@ -44,4 +45,3 @@ pub fn guess_the_number() {
         }
     }
 }
-

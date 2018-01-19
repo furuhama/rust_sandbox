@@ -43,4 +43,3 @@ pub fn condition_controller() {
         println!("{}", number);
     }
 }
-

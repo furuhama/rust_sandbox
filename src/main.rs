@@ -21,4 +21,3 @@ fn main() {
 
     my_module::practice_ownership();
 }
-

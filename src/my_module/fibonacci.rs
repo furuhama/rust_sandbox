@@ -6,7 +6,7 @@ pub fn get_fibonacci(n: i32) -> u64 {
     let mut counter: i32 = 1;
 
     if n == 1 {
-        return 1
+        return 1;
     }
 
     loop {
@@ -19,7 +19,7 @@ pub fn get_fibonacci(n: i32) -> u64 {
             break;
         }
     }
-    return a
+    return a;
 }
 
 pub fn get_fibonacci_tuple(n: i32) -> i64 {
@@ -27,7 +27,7 @@ pub fn get_fibonacci_tuple(n: i32) -> i64 {
     let mut counter: i32 = 1;
 
     if n == 1 {
-        return 1
+        return 1;
     }
 
     loop {
@@ -38,6 +38,5 @@ pub fn get_fibonacci_tuple(n: i32) -> i64 {
             break;
         }
     }
-    return tup.0
+    return tup.0;
 }
-

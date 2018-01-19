@@ -36,4 +36,3 @@ fn int_fn(x: i32) {
 fn return_value(x: i32) -> i32 {
     x
 }
-

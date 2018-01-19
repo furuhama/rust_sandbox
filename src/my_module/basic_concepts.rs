@@ -21,7 +21,6 @@ pub fn run_basic_concepts() {
     let piyo = piyo * 3;
     println!("{}", piyo);
 
-
     // Types
 
     // type annotation
@@ -41,4 +40,3 @@ pub fn run_basic_concepts() {
     let arr = [1, 2, 3, 4, 5, 6];
     println!("{}", arr[0]);
 }
-
