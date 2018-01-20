@@ -12,4 +12,5 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 3.4 Comments (2018/01/19)
 - 3.5 Control Flow (2018/01/19)
 - 4.1 What is Ownership? (2018/01/20)
+- 4.2 References & Borrowing (2018/01/20)
 
