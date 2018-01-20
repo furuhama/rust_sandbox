@@ -13,6 +13,7 @@ pub use self::ownership::practice_ownership;
 pub use self::slice::slice;
 pub use self::make_struct::make_struct;
 pub use self::struct_example::struct_example;
+pub use self::method_syntax::method_syntax;
 
 // call mod files
 mod fibonacci;
@@ -26,3 +27,4 @@ mod ownership;
 mod slice;
 mod make_struct;
 mod struct_example;
+mod method_syntax;
