@@ -11,6 +11,7 @@ pub use self::basic_functions::basic_functions;
 pub use self::condition_control::condition_controller;
 pub use self::ownership::practice_ownership;
 pub use self::slice::slice;
+pub use self::make_struct::make_struct;
 
 // call mod files
 mod fibonacci;
@@ -22,3 +23,4 @@ mod basic_functions;
 mod condition_control;
 mod ownership;
 mod slice;
+mod make_struct;
