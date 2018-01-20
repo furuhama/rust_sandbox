@@ -10,6 +10,7 @@ pub use self::basic_concepts::run_basic_concepts;
 pub use self::basic_functions::basic_functions;
 pub use self::condition_control::condition_controller;
 pub use self::ownership::practice_ownership;
+pub use self::slice::slice;
 
 // call mod files
 mod fibonacci;
@@ -20,3 +21,4 @@ mod basic_concepts;
 mod basic_functions;
 mod condition_control;
 mod ownership;
+mod slice;
