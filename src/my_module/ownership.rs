@@ -26,13 +26,13 @@ pub fn practice_ownership() {
 
     println!("The length of '{}' is {}", s4, len);
 
-    // Pattern 2: Use reference (it is called `bollowing` in Rust)
+    // Pattern 2: Use reference (it is called `borrowing` in Rust)
     let s5 = gives_ownership();
     let length = use_reference(&s5);
 
     println!("The length of '{}' is {}", s5, length);
 
-    // Mutable bollowing
+    // Mutable & borrowing
     // change String, not moving ownership
     let mut s6 = String::from("hello");
     change_str(&mut s6);
