@@ -16,4 +16,5 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 4.3 Slices (2018/01/20)
 - 5.1 Defining and Instantiating Structs (2018/01/20)
 - 5.2 An Example Program Using Structs (2018/01/20)
+- 5.3 Method Syntax (2018/01/21)
 
