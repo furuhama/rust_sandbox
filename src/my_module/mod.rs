@@ -12,6 +12,7 @@ pub use self::condition_control::condition_controller;
 pub use self::ownership::practice_ownership;
 pub use self::slice::slice;
 pub use self::make_struct::make_struct;
+pub use self::struct_example::struct_example;
 
 // call mod files
 mod fibonacci;
@@ -24,3 +25,4 @@ mod condition_control;
 mod ownership;
 mod slice;
 mod make_struct;
+mod struct_example;

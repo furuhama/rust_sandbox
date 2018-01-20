@@ -23,5 +23,7 @@ fn main() {
 
     // my_module::slice();
 
-    my_module::make_struct();
+    // my_module::make_struct();
+
+    my_module::struct_example();
 }
