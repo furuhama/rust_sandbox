@@ -31,6 +31,12 @@ pub fn practice_ownership() {
     let length = use_reference(&s5);
 
     println!("The length of '{}' is {}", s5, length);
+
+    // Mutable bollowing
+    // change String, not moving ownership
+    let mut s6 = String::from("hello");
+    change_str(&mut s6);
+    println!("{}", s6);
 }
 
 fn takes_ownership(some_string: String) {
@@ -59,4 +65,8 @@ fn return_string_and_length(s: String) -> (String, usize) {
 
 fn use_reference(s: &String) -> usize {
     s.len()
+}
+
+fn change_str(s: &mut String) {
+    s.push_str(", Rust!!!");
 }
