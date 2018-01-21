@@ -14,6 +14,7 @@ pub use self::slice::slice;
 pub use self::make_struct::make_struct;
 pub use self::struct_example::struct_example;
 pub use self::method_syntax::method_syntax;
+pub use self::define_enum::define_enum;
 
 // call mod files
 mod fibonacci;
@@ -28,3 +29,4 @@ mod slice;
 mod make_struct;
 mod struct_example;
 mod method_syntax;
+mod define_enum;
