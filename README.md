@@ -18,4 +18,5 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 5.2 An Example Program Using Structs (2018/01/20)
 - 5.3 Method Syntax (2018/01/21)
 - 6.1 Defining an Enum (2018/01/22)
+- 6.2 The `match` Control Flow Operator(only former part of this section) (2018/01/27)
 
