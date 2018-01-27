@@ -19,11 +19,11 @@ pub fn define_enum() {
 
     // try to Option enum
 
-    let some_number = Some(5);
-    let some_string = Some("a string");
-    let absent_number: Option<i32> = None;
+    // let some_number = Some(5);
+    // let some_string = Some("a string");
+    // let absent_number: Option<i32> = None;
 
-    println!("{}, {}, {}", some_number, some_string, absent_number);
+    // println!("{}, {}, {}", some_number, some_string, absent_number);
 }
 
 #[derive(Debug)]
