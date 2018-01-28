@@ -29,7 +29,7 @@ fn main() {
 
     // my_module::method_syntax();
 
-    // my_module::define_enum();
+    my_module::define_enum();
 
     my_module::match_control();
 }
