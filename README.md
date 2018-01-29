@@ -23,4 +23,5 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 6.3 Concise Control Flow with `if let` (2018/01/29)
 - 7.3 Referring to Names in Different Modules (2018/01/29)
 - 8.1 Vectors (2018/01/29)
+- 8.2 Strings (2018/01/29)
 
