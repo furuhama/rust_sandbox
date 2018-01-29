@@ -33,5 +33,7 @@ fn main() {
 
     // my_module::match_control();
 
-    my_module::vector();
+    // my_module::vector();
+
+    my_module::string();
 }

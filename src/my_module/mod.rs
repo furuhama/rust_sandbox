@@ -18,6 +18,7 @@ pub use self::method_syntax::method_syntax;
 // pub use self::define_enum::define_enum;
 // pub use self::match_control::match_control;
 pub use self::vector::vector;
+pub use self::string::string;
 
 // call mod files
 mod fibonacci;
@@ -35,3 +36,4 @@ mod method_syntax;
 // mod define_enum;
 // mod match_control;
 mod vector;
+mod string;
