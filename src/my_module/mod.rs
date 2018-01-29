@@ -16,6 +16,7 @@ pub use self::struct_example::struct_example;
 pub use self::method_syntax::method_syntax;
 pub use self::define_enum::define_enum;
 pub use self::match_control::match_control;
+pub use self::vector::vector;
 
 // call mod files
 mod fibonacci;
@@ -32,3 +33,4 @@ mod struct_example;
 mod method_syntax;
 mod define_enum;
 mod match_control;
+mod vector;

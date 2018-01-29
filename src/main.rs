@@ -32,4 +32,6 @@ fn main() {
     // my_module::define_enum();
 
     // my_module::match_control();
+
+    my_module::vector();
 }
