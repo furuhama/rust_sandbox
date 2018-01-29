@@ -1,6 +1,10 @@
 // vector
 
 pub fn vector() {
+    //
+    // basic
+    //
+
     // init vector
     let v: Vec<i32> = Vec::new();
     println!("{:?}", v);
@@ -43,4 +47,39 @@ pub fn vector() {
     // get by get method(when index out of range)
     let tenth: Option<&i32> = v5.get(9);
     println!("10th: {:?}", tenth); // return None
+
+    //
+    // iterator
+    //
+
+    // iterate
+    let v6 = vec![10, 28, 37, 93];
+    for i in &v6 {
+        println!("{}", i);
+    }
+
+    // change elements by iteration
+    let mut v7 = vec![1, 92, 374, 27362];
+    for i in &mut v7 {
+        *i += 128
+    }
+    println!("{:?}", v7);
+
+    //
+    // enum
+    //
+
+    #[derive(Debug)]
+    enum SpreadsheetCells {
+        Int(i32),
+        Float(f64),
+        Text(String),
+    }
+
+    let row = vec![
+        SpreadsheetCells::Int(3),
+        SpreadsheetCells::Text(String::from("hoge")),
+        SpreadsheetCells::Float(10.23),
+    ];
+    println!("{:?}", row);
 }
