@@ -20,4 +20,5 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 6.1 Defining an Enum (2018/01/22)
 - 6.2 The `match` Control Flow Operator(only former part of this section) (2018/01/27)
 - 6.2 The `match` Control Flow Operator (2018/01/28)
+- 6.3 Concise Control Flow with `if let` (2018/01/29)
 
