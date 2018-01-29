@@ -61,4 +61,14 @@ pub fn match_control() {
         _ => count += 1,
     }
     println!("count: {}", count);
+
+    // let coin = Coin::Quarter(UsState::Alaska);
+    let coin = Coin::Penny;
+
+    if let Coin::Quarter(state) = coin {
+        println!("hoge hoge {:?}", state);
+    } else {
+        count += 1;
+    }
+    println!("count: {}", count);
 }
