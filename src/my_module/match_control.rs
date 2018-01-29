@@ -51,12 +51,14 @@ pub fn match_control() {
 
     println!("{:?}, {:?}", six, none);
 
-    let some_u8_value = 7u8;
+    let some_u8_value = 0u8;
+    let mut count = 0;
     match some_u8_value {
         1 => println!("one"),
         3 => println!("three"),
         5 => println!("five"),
         7 => println!("seven"),
-        _ => (),
+        _ => count += 1,
     }
+    println!("count: {}", count);
 }
