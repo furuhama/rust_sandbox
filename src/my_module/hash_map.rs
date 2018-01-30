@@ -23,4 +23,22 @@ pub fn hash_map() {
     println!("{:?}", map);
     // can't use field_XXX after insertion
     // println!("{}", field_name);
+
+    // get value from scores(defined above)
+    let team_name = String::from("nyan");
+    let score = scores.get(&team_name);
+    println!("{:?}", score); // returns Some(10)
+
+    // override values
+    let mut scores2 = HashMap::new();
+    scores2.insert(String::from("nyanko"), 10);
+    scores2.insert(String::from("nyanko"), 35);
+    println!("{:?}", scores2);
+
+    // only insert if the key has no value
+    let mut scores3 = HashMap::new();
+    scores3.insert(String::from("hoge"), 10);
+    scores3.entry(String::from("fuga")).or_insert(50);
+    scores3.entry(String::from("hoge")).or_insert(35); // no changes
+    println!("{:?}", scores3);
 }
