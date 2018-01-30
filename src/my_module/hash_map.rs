@@ -14,4 +14,13 @@ pub fn hash_map() {
     let initial_scores = vec![10, 50];
     let scores: HashMap<_, _> = teams.iter().zip(initial_scores.iter()).collect();
     println!("{:?}", scores);
+
+    // ownership
+    let field_name = String::from("Nyanko");
+    let field_value = String::from("hoge");
+    let mut map = HashMap::new();
+    map.insert(field_name, field_value);
+    println!("{:?}", map);
+    // can't use field_XXX after insertion
+    // println!("{}", field_name);
 }
