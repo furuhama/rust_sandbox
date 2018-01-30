@@ -45,4 +45,8 @@ pub fn string() {
     for b in "にゃーん".bytes() {
         println!("{}", b);
     }
+
+    for e in "ふにゃ".bytes() {
+        println!("{}", e);
+    }
 }
