@@ -35,5 +35,7 @@ fn main() {
 
     // my_module::vector();
 
-    my_module::string();
+    // my_module::string();
+
+    my_module::hash_map();
 }

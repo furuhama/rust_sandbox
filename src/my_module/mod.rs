@@ -19,6 +19,7 @@ pub use self::method_syntax::method_syntax;
 // pub use self::match_control::match_control;
 pub use self::vector::vector;
 pub use self::string::string;
+pub use self::hash_map::hash_map;
 
 // call mod files
 mod fibonacci;
@@ -37,3 +38,4 @@ mod method_syntax;
 // mod match_control;
 mod vector;
 mod string;
+mod hash_map;
