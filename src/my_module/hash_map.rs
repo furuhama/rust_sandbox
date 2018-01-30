@@ -41,4 +41,13 @@ pub fn hash_map() {
     scores3.entry(String::from("fuga")).or_insert(50);
     scores3.entry(String::from("hoge")).or_insert(35); // no changes
     println!("{:?}", scores3);
+
+    // update value by old value
+    let text = "hello world wonderful world";
+    let mut map = HashMap::new();
+    for word in text.split_whitespace() {
+        let count = map.entry(word).or_insert(0);
+        *count += 1;
+    }
+    println!("{:?}", map);
 }
