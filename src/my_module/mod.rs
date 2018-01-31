@@ -20,6 +20,7 @@ pub use self::method_syntax::method_syntax;
 pub use self::vector::vector;
 pub use self::string::string;
 pub use self::hash_map::hash_map;
+pub use self::error_handling::error_handling;
 
 // call mod files
 mod fibonacci;
@@ -39,3 +40,4 @@ mod method_syntax;
 mod vector;
 mod string;
 mod hash_map;
+mod error_handling;

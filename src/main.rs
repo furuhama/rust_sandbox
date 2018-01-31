@@ -37,5 +37,7 @@ fn main() {
 
     // my_module::string();
 
-    my_module::hash_map();
+    // my_module::hash_map();
+
+    my_module::error_handling();
 }
