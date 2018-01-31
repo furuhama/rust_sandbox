@@ -117,7 +117,7 @@ impl Summarizable for NoBody {
     }
 }
 
-// function bouding trait
+// function bounding trait
 fn notify<T: Summarizable>(item: T) {
     println!("notification: {}", item.summary())
 }
