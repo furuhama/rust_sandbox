@@ -21,6 +21,7 @@ pub use self::vector::vector;
 pub use self::string::string;
 pub use self::hash_map::hash_map;
 pub use self::error_handling::error_handling;
+pub use self::generics::generics;
 
 // call mod files
 mod fibonacci;
@@ -41,3 +42,4 @@ mod vector;
 mod string;
 mod hash_map;
 mod error_handling;
+mod generics;
