@@ -26,4 +26,5 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 8.2 Strings (2018/01/29)
 - 8.3 HashMap (2018/01/31)
 - 9 Error Handling (2018/01/31)
+- 10.2 Traits: Defining Shared Behavior (2018/02/01)
 
