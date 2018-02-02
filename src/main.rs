@@ -41,5 +41,7 @@ fn main() {
 
     // my_module::error_handling();
 
-    my_module::generics();
+    // my_module::generics();
+
+    my_module::lifetime();
 }
