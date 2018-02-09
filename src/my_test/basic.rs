@@ -36,6 +36,7 @@ mod tests {
         assert!(!smaller.can_hold(&larger));
     }
 
+    #[derive(Debug)]
     struct Rectangle {
         length: u32,
         width: u32,
