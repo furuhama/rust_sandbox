@@ -3,6 +3,7 @@
 #[cfg(test)]
 mod tests {
     use my_module;
+    use super::*;
 
     #[test]
     fn it_works() {
@@ -15,6 +16,7 @@ mod tests {
     }
 
     // this test will fail
+    //
     // #[test]
     // fn another() {
     //     panic!("Make this test fail!");
@@ -36,6 +38,7 @@ mod tests {
         assert!(!smaller.can_hold(&larger));
     }
 
+    // define struct & impl for test
     #[derive(Debug)]
     struct Rectangle {
         length: u32,
