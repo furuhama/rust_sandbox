@@ -3,7 +3,7 @@ extern crate hello_world;
 use hello_world::my_module;
 
 fn main() {
-    // my_module::hello_rust();
+    my_module::hello_rust();
 
     // my_module::guess_the_number();
 
@@ -43,5 +43,5 @@ fn main() {
 
     // my_module::generics();
 
-    my_module::lifetime();
+    // my_module::lifetime();
 }
