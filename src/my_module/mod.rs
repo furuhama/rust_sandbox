@@ -22,7 +22,7 @@ pub use self::string::string;
 pub use self::hash_map::hash_map;
 pub use self::error_handling::error_handling;
 // pub use self::generics::generics;
-pub use self::lifetime::lifetime;
+// pub use self::lifetime::lifetime;
 
 // call mod files
 mod fibonacci;
@@ -44,4 +44,4 @@ mod string;
 mod hash_map;
 mod error_handling;
 // mod generics;
-mod lifetime;
+// mod lifetime;
