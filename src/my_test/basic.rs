@@ -28,6 +28,14 @@ mod tests {
         assert!(larger.can_hold(&smaller));
     }
 
+    #[test]
+    fn smaller_cannot_hold_larger() {
+        let larger = Rectangle { length: 8, width: 7 };
+        let smaller = Rectangle { length: 2, width: 3 };
+
+        assert!(!smaller.can_hold(&larger));
+    }
+
     struct Rectangle {
         length: u32,
         width: u32,
