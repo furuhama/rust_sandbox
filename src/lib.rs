@@ -15,4 +15,10 @@ mod tests {
     fn assertion_equal() {
         assert_eq!(2 + 2, 4);
     }
+
+    // this test will fail
+    // #[test]
+    // fn another() {
+    //     panic!("Make this test fail!");
+    // }
 }
