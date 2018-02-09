@@ -38,6 +38,26 @@ mod tests {
         assert!(!smaller.can_hold(&larger));
     }
 
+    #[test]
+    fn greeting_contains_name() {
+        let result = greeting("Nyanko");
+
+        // basic assertion
+        // assert!(result.contains("Nyanko"));
+
+        assert!(
+            result.contains("Nyanko"),
+            // edit error message
+            "Greeting did not contain name, value was '{}'", result
+        );
+    }
+
+    #[test]
+    #[should_panic]
+    fn greater_than_100() {
+        Guess::new(28365);
+    }
+
     // define struct & impl for test
     #[derive(Debug)]
     struct Rectangle {
@@ -48,6 +68,29 @@ mod tests {
     impl Rectangle {
         fn can_hold(&self, other: &Rectangle) -> bool {
             self.length > other.length && self.width > other.width
+        }
+    }
+
+    // define function for test
+    fn greeting(name: &str) -> String {
+        format!("Hello, {}", name)
+    }
+
+    // define struct & impl for panic test
+    #[derive(Debug)]
+    struct Guess {
+        value: u32,
+    }
+
+    impl Guess {
+        fn new(value: u32) -> Guess {
+            if value < 1 || value > 100 {
+                panic!("Guess value must be between 1 and 100, but got {}.", value);
+            }
+
+            Guess {
+                value
+            }
         }
     }
 }
