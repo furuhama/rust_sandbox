@@ -16,11 +16,10 @@ mod tests {
     }
 
     // this test will fail
-    //
-    // #[test]
-    // fn another() {
-    //     panic!("Make this test fail!");
-    // }
+    #[test]
+    fn another() {
+        panic!("Make this test fail!");
+    }
 
     #[test]
     fn larger_can_hold_smailler() {
