@@ -51,7 +51,6 @@ fn prints_and_returns_10(a: i32) -> i32 {
     10
 }
 
-#[cfg(test)]
-fn add_two(a: i32) -> i32 {
+pub fn add_two(a: i32) -> i32 {
     a + 2
 }
