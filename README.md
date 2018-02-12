@@ -30,4 +30,5 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 10.3 Validating References with Lifetimes (2018/02/09) (diffiult to understand, review in future)
 - 11.1 How to Write Tests (2018/02/09)
 - 11.2 Controlling How Tests are Run (2018/02/12)
+- 11.3 Test Organization (2018/02/12)
 
