@@ -23,16 +23,28 @@ mod tests {
 
     #[test]
     fn larger_can_hold_smailler() {
-        let larger = Rectangle { length: 8, width: 7 };
-        let smaller = Rectangle { length: 2, width: 3 };
+        let larger = Rectangle {
+            length: 8,
+            width: 7,
+        };
+        let smaller = Rectangle {
+            length: 2,
+            width: 3,
+        };
 
         assert!(larger.can_hold(&smaller));
     }
 
     #[test]
     fn smaller_cannot_hold_larger() {
-        let larger = Rectangle { length: 8, width: 7 };
-        let smaller = Rectangle { length: 2, width: 3 };
+        let larger = Rectangle {
+            length: 8,
+            width: 7,
+        };
+        let smaller = Rectangle {
+            length: 2,
+            width: 3,
+        };
 
         assert!(!smaller.can_hold(&larger));
     }
@@ -47,7 +59,8 @@ mod tests {
         assert!(
             result.contains("Nyanko"),
             // edit error message
-            "Greeting did not contain name, value was '{}'", result
+            "Greeting did not contain name, value was '{}'",
+            result
         );
     }
 
@@ -87,9 +100,7 @@ mod tests {
                 panic!("Guess value must be between 1 and 100, but got {}.", value);
             }
 
-            Guess {
-                value
-            }
+            Guess { value }
         }
     }
 }
