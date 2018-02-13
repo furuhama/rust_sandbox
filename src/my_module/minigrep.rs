@@ -18,6 +18,11 @@ pub fn minigrep() {
     println!("Searching for: {}", config.query);
     println!("In file: {}", config.filename);
 
+    run(config);
+}
+
+// extract logic fron main function
+fn run(config: Config) {
     // try to open file which name is given as filename
     let mut f = File::open(config.filename).expect("file not found");
 
