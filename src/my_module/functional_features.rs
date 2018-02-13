@@ -51,3 +51,11 @@ fn generate_workout(intensity: u32, random_number: u32) {
         }
     }
 }
+
+// warning
+
+// let example_closure = |x| x;
+//
+// let s = example_closure(String::from("hello"));
+// let n = example_closure(5); <- this occurs an error, cause when `s` defined
+// example_closure's type is set as String(so we can't set u32 value)
