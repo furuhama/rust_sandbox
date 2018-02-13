@@ -4,7 +4,6 @@ use std::io::Read;
 use std::fs::File;
 // use std::io::ErrorKind;
 
-
 pub fn error_handling() {
     // this returns a panic error
     // panic!("crash and burn!");
