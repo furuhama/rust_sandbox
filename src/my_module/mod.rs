@@ -25,6 +25,7 @@ pub use self::error_handling::error_handling;
 // pub use self::lifetime::lifetime;
 pub use self::minigrep::minigrep;
 pub use self::minigrep::search;
+pub use self::minigrep::search_case_insensitive;
 
 // call mod files
 mod fibonacci;
