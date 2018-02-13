@@ -14,11 +14,22 @@ pub fn functional_features() {
 }
 
 fn generate_workout(intensity: u32, random_number: u32) {
-    let expensive_closure = |num| {
+    // basic closure annotation
+    //
+    // let expensive_closure = |num| {
+    //     println!("calculating slowly...");
+    //     thread::sleep(Duration::from_secs(2));
+    //     num
+    // };
+
+    // type defined closure annotation
+
+    let expensive_closure = |num: u32| -> u32 {
         println!("calculating slowly...");
         thread::sleep(Duration::from_secs(2));
         num
     };
+
 
     if intensity < 25 {
         println!(
