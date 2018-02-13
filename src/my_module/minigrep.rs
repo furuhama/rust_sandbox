@@ -9,8 +9,7 @@ pub fn minigrep() {
     let args: Vec<String> = env::args().collect();
 
     // args[0] == "target/debug/hello_world"
-    let query = &args[1];
-    let filename = &args[2];
+    let (query, filename) = parse_config(&args);
 
     println!("Searching for: {}", query);
     println!("In file: {}", filename);
@@ -23,4 +22,11 @@ pub fn minigrep() {
     f.read_to_string(&mut contents).expect("something went wrong reading the file.");
 
     println!("With text:\n{}", contents);
+}
+
+fn parse_config(args: &[String]) -> (&str, &str) {
+    let query = &args[1];
+    let filename = &args[2];
+
+    (query, filename)
 }
