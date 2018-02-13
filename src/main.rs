@@ -45,5 +45,7 @@ fn main() {
 
     // my_module::lifetime();
 
-    my_module::minigrep();
+    // my_module::minigrep();
+
+    my_module::functional_features();
 }
