@@ -62,7 +62,13 @@ fn run(config: Config) -> Result<(), Box<Error>> {
     let mut contents = String::new();
     f.read_to_string(&mut contents)?;
 
-    for line in search(&config.query, &contents) {
+    let results = if config.case_sensitive {
+        search(&config.query, &contents)
+    } else {
+        search_case_insensitive(&config.query, &contents)
+    };
+
+    for line in results {
         println!("{}", line);
     }
 
@@ -72,6 +78,7 @@ fn run(config: Config) -> Result<(), Box<Error>> {
 struct Config {
     query: String,
     filename: String,
+    case_sensitive: bool,
 }
 
 impl Config {
@@ -83,7 +90,10 @@ impl Config {
 
         let query = args[1].clone();
         let filename = args[2].clone();
+        // read env vars
+        // CASE_INSENSITIVE=1 cargo run [query] [contents]
+        let case_sensitive = env::var("CASE_INSENSITIVE").is_err();
 
-        Ok(Config { query, filename })
+        Ok(Config { query, filename, case_sensitive })
     }
 }
