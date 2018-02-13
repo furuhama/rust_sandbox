@@ -35,4 +35,5 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 12.2 Reading a File (2018/02/13)
 - 12.3 Refactoring to Improve Modularity and Error Handling (2018/02/13)
 - 12.4 Developing the Library's Functionality with Test Driven Development (2018/02/13)
+- 12.5 Working with Environment Variables (2018/02/13)
 
