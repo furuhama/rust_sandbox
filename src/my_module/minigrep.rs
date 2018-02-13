@@ -92,6 +92,10 @@ impl Config {
         // CASE_INSENSITIVE=1 cargo run [query] [contents]
         let case_sensitive = env::var("CASE_INSENSITIVE").is_err();
 
-        Ok(Config { query, filename, case_sensitive })
+        Ok(Config {
+            query,
+            filename,
+            case_sensitive,
+        })
     }
 }
