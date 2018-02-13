@@ -44,4 +44,6 @@ fn main() {
     // my_module::generics();
 
     // my_module::lifetime();
+
+    my_module::minigrep();
 }
