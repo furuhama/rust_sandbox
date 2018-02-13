@@ -26,6 +26,10 @@ pub fn minigrep() {
     }
 }
 
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    vec![]
+}
+
 // extract logic fron main function
 fn run(config: Config) -> Result<(), Box<Error>> {
     // try to open file which name is given as filename
