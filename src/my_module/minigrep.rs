@@ -27,7 +27,17 @@ pub fn minigrep() {
 }
 
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    vec![]
+    let mut results = Vec::new();
+
+    // iterate contents for each line,
+    // if it contains query, its line will be pushed to results vec.
+    for line in contents.lines() {
+        if line.contains(query) {
+            results.push(line);
+        }
+    }
+
+    results
 }
 
 // extract logic fron main function
