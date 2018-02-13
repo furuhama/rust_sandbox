@@ -3,7 +3,6 @@
 #[cfg(test)]
 mod tests {
     use my_module;
-    use super::*;
 
     #[test]
     fn it_works() {
