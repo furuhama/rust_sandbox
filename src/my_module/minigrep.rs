@@ -4,6 +4,7 @@ use std::env;
 use std::fs::File;
 use std::io::prelude::*;
 use std::process;
+use std::error::Error;
 
 pub fn minigrep() {
     // just read arguments and return them
@@ -18,19 +19,25 @@ pub fn minigrep() {
     println!("Searching for: {}", config.query);
     println!("In file: {}", config.filename);
 
-    run(config);
+    if let Err(e) = run(config) {
+        println!("Application error: {}", e);
+
+        process::exit(1);
+    }
 }
 
 // extract logic fron main function
-fn run(config: Config) {
+fn run(config: Config) -> Result<(), Box<Error>> {
     // try to open file which name is given as filename
-    let mut f = File::open(config.filename).expect("file not found");
+    let mut f = File::open(config.filename)?;
 
     // try to set content from read file into contents
     let mut contents = String::new();
-    f.read_to_string(&mut contents).expect("something went wrong reading the file.");
+    f.read_to_string(&mut contents)?;
 
     println!("With text:\n{}", contents);
+
+    Ok(())
 }
 
 struct Config {
