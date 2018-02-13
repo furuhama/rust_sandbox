@@ -31,4 +31,8 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 11.1 How to Write Tests (2018/02/09)
 - 11.2 Controlling How Tests are Run (2018/02/12)
 - 11.3 Test Organization (2018/02/12)
+- 12.1 Accepting Command Line Arguments (2018/02/13)
+- 12.2 Reading a File (2018/02/13)
+- 12.3 Refactoring to Improve Modularity and Error Handling (2018/02/13)
+- 12.4 Developing the Library's Functionality with Test Driven Development (2018/02/13)
 
