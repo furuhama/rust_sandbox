@@ -27,6 +27,7 @@ pub use self::minigrep::minigrep;
 pub use self::minigrep::search;
 pub use self::minigrep::search_case_insensitive;
 pub use self::functional_features::functional_features;
+pub use self::functional_features::Cacher;
 
 // call mod files
 mod fibonacci;
