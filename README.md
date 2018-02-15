@@ -39,4 +39,6 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 12.6 Writing Error Messages to Standard Error Instead of Standard Output (2018/02/13)
 - 13.1 Closures (2018/02/14)
 - 13.2 Iterators (2018/02/15)
+- 13.3 Improving out I/O Project (2018/02/15)
+- 13.4 Performance (2018/02/15)
 
