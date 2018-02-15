@@ -90,17 +90,18 @@ where
     }
 }
 
-pub struct Counter {
+// add _ as a prefix, it can disable unused warnings
+pub struct _Counter {
     count: u32,
 }
 
-impl Counter {
-    pub fn new() -> Counter {
-        Counter { count: 0 }
+impl _Counter {
+    pub fn _new() -> _Counter {
+        _Counter { count: 0 }
     }
 }
 
-impl Iterator for Counter {
+impl Iterator for _Counter {
     type Item = u32;
 
     fn next(&mut self) -> Option<Self::Item> {

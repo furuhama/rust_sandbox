@@ -110,7 +110,7 @@ mod test {
 
     #[test]
     fn calling_next_directly() {
-        let mut counter = my_module::Counter::new();
+        let mut counter = my_module::_Counter::_new();
 
         assert_eq!(counter.next(), Some(1));
         assert_eq!(counter.next(), Some(2));
