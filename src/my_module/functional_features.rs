@@ -11,6 +11,15 @@ pub fn functional_features() {
         simulated_user_specified_value,
         simulated_random_number
     );
+
+    // use iterator
+    let v1 = vec![1, 2, 3];
+
+    let v1_iter = v1.iter();
+
+    for val in v1_iter {
+        println!("Got: {}", val);
+    }
 }
 
 fn generate_workout(intensity: u32, random_number: u32) {
