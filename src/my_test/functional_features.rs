@@ -119,4 +119,14 @@ mod test {
         assert_eq!(counter.next(), Some(5));
         assert_eq!(counter.next(), None);
     }
+
+    #[test]
+    fn using_other_iterator_trait_methods() {
+        let sum: u32 = my_module::_Counter::_new().zip(my_module::_Counter::_new().skip(1))
+            .map(|(a, b)| a * b)
+            .filter(|x| x % 3 == 0)
+            .sum();
+
+        assert_eq!(18, sum);
+    }
 }
