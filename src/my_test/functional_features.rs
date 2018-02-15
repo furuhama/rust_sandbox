@@ -1,13 +1,29 @@
 // tests for my_module::functional_features()
 
-use my_module;
+#[cfg(test)]
+mod test {
+    use my_module;
 
-#[test]
-fn call_with_different_values() {
-    let mut c = my_module::Cacher::new(|x| x);
+    #[test]
+    fn call_with_different_values() {
+        let mut c = my_module::Cacher::new(|x| x);
 
-    let v1 = c.value(1);
-    let v2 = c.value(2);
+        let v1 = c.value(1);
+        let v2 = c.value(2);
 
-    assert_eq!(v2, 2);
+        assert_eq!(v2, 2);
+    }
+
+    #[test]
+    fn capture_outside_closure() {
+        let x = 4;
+
+        // capture x (outside closure)
+        // function can't do such thing
+        let equal_to_x = |z| z == x;
+
+        let y = 4;
+
+        assert!(equal_to_x(y));
+    }
 }
