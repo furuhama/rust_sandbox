@@ -51,7 +51,8 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 
     // use iterator
 
-    contents.lines()
+    contents
+        .lines()
         .filter(|line| line.contains(query))
         .collect()
 }

@@ -84,17 +84,24 @@ mod test {
 
     // search all shoes & return designated size shoes
     fn shoes_in_my_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
-        shoes.into_iter()
-            .filter(|s| s.size == shoe_size)
-            .collect()
+        shoes.into_iter().filter(|s| s.size == shoe_size).collect()
     }
 
     #[test]
     fn filter_by_size() {
         let shoes = vec![
-            Shoe { size: 10, style: String::from("sneaker") },
-            Shoe { size: 13, style: String::from("sandal") },
-            Shoe { size: 10, style: String::from("boot") },
+            Shoe {
+                size: 10,
+                style: String::from("sneaker"),
+            },
+            Shoe {
+                size: 13,
+                style: String::from("sandal"),
+            },
+            Shoe {
+                size: 10,
+                style: String::from("boot"),
+            },
         ];
 
         let in_my_size = shoes_in_my_size(shoes, 10);
@@ -102,8 +109,14 @@ mod test {
         assert_eq!(
             in_my_size,
             vec![
-                Shoe { size: 10, style: String::from("sneaker") },
-                Shoe { size: 10, style: String::from("boot") },
+                Shoe {
+                    size: 10,
+                    style: String::from("sneaker"),
+                },
+                Shoe {
+                    size: 10,
+                    style: String::from("boot"),
+                },
             ]
         );
     }
@@ -122,7 +135,8 @@ mod test {
 
     #[test]
     fn using_other_iterator_trait_methods() {
-        let sum: u32 = my_module::_Counter::_new().zip(my_module::_Counter::_new().skip(1))
+        let sum: u32 = my_module::_Counter::_new()
+            .zip(my_module::_Counter::_new().skip(1))
             .map(|(a, b)| a * b)
             .filter(|x| x % 3 == 0)
             .sum();
