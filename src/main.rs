@@ -1,4 +1,5 @@
 extern crate hello_world;
+extern crate adder;
 
 use hello_world::my_module;
 
@@ -47,5 +48,8 @@ fn main() {
 
     // my_module::minigrep();
 
-    my_module::functional_features();
+    // my_module::functional_features();
+
+    let num = 10;
+    println!("[using adder crate] {} plus one is {}", num, adder::add_one(num));
 }

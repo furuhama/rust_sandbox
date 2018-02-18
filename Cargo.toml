@@ -10,6 +10,7 @@ license = "MIT"
 
 num = "0.1"
 rand = "0.4"
+adder = { path = "adder" }
 
 [profile.dev]
 
