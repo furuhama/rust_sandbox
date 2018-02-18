@@ -41,4 +41,9 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 13.2 Iterators (2018/02/15)
 - 13.3 Improving out I/O Project (2018/02/15)
 - 13.4 Performance (2018/02/15)
+- 14.1 Customizing Builds with Release Profiles (2018/02/18)
+- 14.2 Publishing a Crate to Crates.io (2018/02/18)
+- 14.3 Cargo workspaces (2018/02/18)
+- 14.4 Installing Binaries from Crates.io with `cargo install` (2018/02/18)
+- 14.5 Extending Cargo with custom Commands (2018/02/18)
 
