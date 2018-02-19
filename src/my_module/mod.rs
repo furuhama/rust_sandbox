@@ -29,6 +29,7 @@ pub use self::minigrep::search_case_insensitive;
 pub use self::functional_features::functional_features;
 pub use self::functional_features::Cacher;
 pub use self::functional_features::_Counter;
+pub use self::pointer::pointers;
 
 // call mod files
 mod fibonacci;
@@ -53,3 +54,4 @@ mod error_handling;
 // mod lifetime;
 mod minigrep;
 mod functional_features;
+mod pointer;
