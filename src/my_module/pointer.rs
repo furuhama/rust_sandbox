@@ -1,6 +1,7 @@
 // smart pointers in Rust
 
 use self::List::{Cons, Nil};
+use std::ops::Deref;
 
 pub fn pointers() {
     using_box();
@@ -25,12 +26,19 @@ fn using_box() {
                                                 Box::new(Nil))))));
     println!("{:?}", list);
 
-    // `Deref`
+    // Use Box like referencing
     let x = 5;
     let y = Box::new(x);
 
     assert_eq!(5, x);
     assert_eq!(5, *y);
+
+    // Use MyBox like Box
+    let p = 5;
+    let q = MyBox::new(p);
+
+    assert_eq!(5, p);
+    assert_eq!(5, *(q.deref()));
 }
 
 #[derive(Debug)]
@@ -38,4 +46,20 @@ enum List {
     // Box is used as recursive type
     Cons(i32, Box<List>),
     Nil,
+}
+
+struct MyBox<T>(T);
+
+impl<T> MyBox<T> {
+    fn new(x: T) -> MyBox<T> {
+        MyBox(x)
+    }
+}
+
+impl<T> Deref for MyBox<T> {
+    type Target = T;
+
+    fn deref(&self) -> &T {
+        &self.0
+    }
 }
