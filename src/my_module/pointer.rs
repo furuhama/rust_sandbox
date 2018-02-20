@@ -24,6 +24,13 @@ fn using_box() {
                                   Box::new(Cons(3,
                                                 Box::new(Nil))))));
     println!("{:?}", list);
+
+    // `Deref`
+    let x = 5;
+    let y = Box::new(x);
+
+    assert_eq!(5, x);
+    assert_eq!(5, *y);
 }
 
 #[derive(Debug)]
