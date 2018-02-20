@@ -39,6 +39,9 @@ fn using_box() {
 
     assert_eq!(5, p);
     assert_eq!(5, *(q.deref()));
+
+    let r = MyBox::new(String::from("Rust"));
+    hello(&r);
 }
 
 #[derive(Debug)]
@@ -62,4 +65,8 @@ impl<T> Deref for MyBox<T> {
     fn deref(&self) -> &T {
         &self.0
     }
+}
+
+fn hello(name: &str) {
+    println!("Hello, {}", name);
 }
