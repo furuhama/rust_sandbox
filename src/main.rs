@@ -48,7 +48,7 @@ fn main() {
 
     // my_module::functional_features();
 
-    // my_module::pointers();
+    my_module::pointers();
 
-    my_module::references_and_borrowings();
+    // my_module::references_and_borrowings();
 }
