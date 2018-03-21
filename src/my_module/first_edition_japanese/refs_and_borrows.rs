@@ -31,5 +31,7 @@ struct Foo<'a> {
 
 // function x_value has lifetime 'a
 impl<'a> Foo<'a> {
-    fn x_value(&self) -> &'a i32 { self.x }
+    fn x_value(&self) -> &'a i32 {
+        self.x
+    }
 }
