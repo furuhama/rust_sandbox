@@ -20,10 +20,7 @@ fn using_box() {
     let b = Box::new(5);
     println!("b = {}", b); // b = 5
 
-    let list = Cons(1,
-                    Box::new(Cons(2,
-                                  Box::new(Cons(3,
-                                                Box::new(Nil))))));
+    let list = Cons(1, Box::new(Cons(2, Box::new(Cons(3, Box::new(Nil))))));
     println!("{:?}", list);
 
     // Use Box like referencing
