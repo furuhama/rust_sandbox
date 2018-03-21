@@ -1,6 +1,7 @@
 ## Rust
 
 The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/second-edition/)) [WIP]
+[プログラミング言語Rust](https://rust-lang-ja.github.io/the-rust-programming-language-ja/1.6/book/)
 
 ======= my progress =======
 
