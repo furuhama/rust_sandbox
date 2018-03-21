@@ -48,6 +48,7 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 14.5 Extending Cargo with custom Commands (2018/02/18)
 - 15.1 `Box<T>` Points to Data on the Heap and Has a Known Size (2018/02/19)
 - 15.2 Treating Smart Pointers like Regular References wiht the `Deref` Trait (2018/02/20) (2018/03/21)
-- 15.3 The `Drop` Trait Runs Code on Cleanup
-- 15.4 `Rc<T>`, the Reference Counted Smart Pointer
+- 15.3 The `Drop` Trait Runs Code on Cleanup (2018/03/21)
+- 15.4 `Rc<T>`, the Reference Counted Smart Pointer (2018/03/21)
+- 15.5 `RefCell<T>` and the Interior Mutability Pattern (2018/03/21) (Do latter half of this section later)
 
