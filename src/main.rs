@@ -48,8 +48,5 @@ fn main() {
 
     // my_module::functional_features();
 
-    // let num = 10;
-    // println!("[using adder crate] {} plus one is {}", num, adder::add_one(num));
-
     // my_module::pointers();
 }
