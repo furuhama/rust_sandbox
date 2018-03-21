@@ -17,4 +17,19 @@ pub fn references_and_borrowings() {
     // `println!` macro references argument as an immutable variable
     // (= & reference, not &mut reference)
     println!("use &mut reference: {}", x);
+
+    let num = &5;
+    let fo = Foo { x: num };
+    println!("fo's x is: {}", fo.x_value());
+}
+
+// struct Foo has lifetime `a`
+struct Foo<'a> {
+    // its field x is a reference, so it also has lifetime `a`
+    x: &'a i32,
+}
+
+// function x_value has lifetime 'a
+impl<'a> Foo<'a> {
+    fn x_value(&self) -> &'a i32 { self.x }
 }
