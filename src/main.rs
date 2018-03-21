@@ -10,9 +10,7 @@ fn main() {
 
     // my_module::fizzbuzz(35);
 
-    // let n: i32 = 90;
-    // println!("{}th fibonacci number: {}", n, my_module::get_fibonacci(n));
-    // println!("{}th fibonacci number(tuple): {}", n, my_module::get_fibonacci_tuple(n));
+    my_module::fibonacci();
 
     // my_module::run_basic_concepts();
 
@@ -53,5 +51,5 @@ fn main() {
     // let num = 10;
     // println!("[using adder crate] {} plus one is {}", num, adder::add_one(num));
 
-    my_module::pointers();
+    // my_module::pointers();
 }
