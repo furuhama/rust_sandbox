@@ -51,4 +51,5 @@ The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/seco
 - 15.3 The `Drop` Trait Runs Code on Cleanup (2018/03/21)
 - 15.4 `Rc<T>`, the Reference Counted Smart Pointer (2018/03/21)
 - 15.5 `RefCell<T>` and the Interior Mutability Pattern (2018/03/21) (Do latter half of this section later)
+- 15.6 Reference Cycles Can Leak Memory (skipped!)
 
