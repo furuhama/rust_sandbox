@@ -32,7 +32,7 @@ fn main() {
 
     // my_module::match_control();
 
-    // my_module::vector();
+    my_module::vector();
 
     // my_module::string();
 
@@ -50,5 +50,5 @@ fn main() {
 
     // my_module::pointers();
 
-    my_module::references_and_borrowings();
+    // my_module::references_and_borrowings();
 }
