@@ -5,6 +5,7 @@ use std::ops::Deref;
 
 pub fn pointers() {
     using_box();
+    drop_trait();
 }
 
 fn using_box() {
@@ -42,6 +43,21 @@ fn using_box() {
 
     let s = MyBox2::new(String::from("Haskell"));
     hello(&(*s)[..]);
+}
+
+fn drop_trait() {
+    {
+        // Use Drop trait
+        let _c = CustomSmartPointer { data: String::from("hogeee") };
+        let _d = CustomSmartPointer { data: String::from("fugaaaaa") };
+        println!("CustomSmartPointers created.");
+        // at this line, Drop trait's drop() called automatically.
+    }
+    let e = CustomSmartPointer { data: String::from("piyoooo") };
+    println!("CustomSmartPointer e is created.");
+    // e.drop(); <- this method calling is not allowed in Rust
+    drop(e);
+    println!("CustomSmartPointer e dropped before the end of main function.");
 }
 
 #[derive(Debug)]
@@ -90,5 +106,15 @@ impl<T> Deref for MyBox2<T> {
 
     fn deref(&self) -> &T {
         &self.0
+    }
+}
+
+struct CustomSmartPointer {
+    data: String,
+}
+
+impl Drop for CustomSmartPointer {
+    fn drop(&mut self) {
+        println!("Dropping CustomSmartPointer with data `{}`!", self.data);
     }
 }
