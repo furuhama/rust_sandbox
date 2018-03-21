@@ -29,6 +29,7 @@ pub use self::functional_features::functional_features;
 pub use self::functional_features::Cacher;
 pub use self::functional_features::_Counter;
 pub use self::pointer::pointers;
+pub use self::first_edition_japanese::references_and_borrowings;
 
 // call mod files
 mod fibonacci;
@@ -54,3 +55,4 @@ mod error_handling;
 mod minigrep;
 mod functional_features;
 mod pointer;
+mod first_edition_japanese;

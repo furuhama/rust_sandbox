@@ -10,7 +10,7 @@ fn main() {
 
     // my_module::fizzbuzz(35);
 
-    my_module::fibonacci();
+    // my_module::fibonacci();
 
     // my_module::run_basic_concepts();
 
@@ -49,4 +49,6 @@ fn main() {
     // my_module::functional_features();
 
     // my_module::pointers();
+
+    my_module::references_and_borrowings();
 }
