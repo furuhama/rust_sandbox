@@ -2,11 +2,9 @@
 
 ======== references ========
 
-The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/second-edition/)) [WIP]
-
-[プログラミング言語Rust](https://rust-lang-ja.github.io/the-rust-programming-language-ja/1.6/book/)
-
-[第二言語としてのRust](https://employment.en-japan.com/engineerhub/entry/2017/07/19/110000)
+- The Rust Programming Language ([2nd edition](https://doc.rust-lang.org/book/second-edition/)) [WIP]
+- [プログラミング言語Rust](https://rust-lang-ja.github.io/the-rust-programming-language-ja/1.6/book/)
+- [第二言語としてのRust](https://employment.en-japan.com/engineerhub/entry/2017/07/19/110000)
 
 ======= my progress =======
 
