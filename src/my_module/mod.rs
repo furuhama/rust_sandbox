@@ -28,6 +28,7 @@ pub use self::minigrep::search_case_insensitive;
 pub use self::functional_features::functional_features;
 pub use self::functional_features::Cacher;
 pub use self::functional_features::_Counter;
+pub use self::functional_features::square_sum;
 pub use self::pointer::pointers;
 pub use self::pointer::Messenger;
 pub use self::pointer::LimitTracker;

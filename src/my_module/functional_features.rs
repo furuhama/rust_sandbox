@@ -19,6 +19,10 @@ pub fn functional_features() {
     }
 }
 
+pub fn square_sum(x: isize) -> isize {
+    (1..x).filter(|i| i % 2 == 0).map(|i| i * i).sum()
+}
+
 fn generate_workout(intensity: u32, random_number: u32) {
     // basic closure annotation
     //
