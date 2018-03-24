@@ -48,9 +48,11 @@ fn main() {
 
     // my_module::functional_features();
 
-    my_module::pointers();
+    // my_module::pointers();
 
     // my_module::references_and_borrowings();
 
-    println!("square sum: {}", my_module::square_sum(10));
+    // println!("square sum: {}", my_module::square_sum(10));
+
+    my_module::echo_server();
 }

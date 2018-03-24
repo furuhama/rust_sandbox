@@ -7,7 +7,6 @@ mod test {
 
     struct MockMessenger {
         // sent_messages: Vec<String>,
-
         sent_messages: RefCell<Vec<String>>,
     }
 
@@ -15,7 +14,9 @@ mod test {
         fn new() -> MockMessenger {
             // MockMessenger { sent_messages: vec![] }
 
-            MockMessenger { sent_messages: RefCell::new(vec![]) }
+            MockMessenger {
+                sent_messages: RefCell::new(vec![]),
+            }
         }
     }
 
