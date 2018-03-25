@@ -2,7 +2,7 @@
 
 use std::str::from_utf8;
 
-pub enum PaeseResult<T> {
+pub enum ParseResult<T> {
     Complete(T),
     Partial,
     // for ease, not to write details for error handling
@@ -63,4 +63,37 @@ pub fn parse(mut buf: &[u8]) -> ParseResult<Request> {
     from_utf8(buf)
         .map(Request)
         .into()
+}
+
+#[test]
+fn http09_get_success_root() {
+    let req = b"GET /\r\n";
+    let res = parse(req);
+
+    assert!(res.is_complete());
+}
+
+#[test]
+fn http09_get_success_hoge_fuga() {
+    let req = b"GET /hoge/fuga\r\n";
+    let res = parse(req);
+
+    assert!(res.is_complete());
+}
+
+#[test]
+fn http09_get_partial_root() {
+    let req = b"GET /\r";
+    let res = parse(req);
+
+    assert!(res.is_partial());
+}
+
+#[test]
+#[should_panic]
+fn http09_post_failure() {
+    let req = b"POST /\r\n";
+    let res = parse(req);
+
+    assert!(res.is_complete());
 }
