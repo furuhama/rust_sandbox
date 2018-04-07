@@ -14,7 +14,7 @@ impl<T> ParseResult<T> {
         use self::ParseResult::*;
         match *self {
             Complete(_) => true,
-            _ => false
+            _ => false,
         }
     }
 
@@ -22,7 +22,7 @@ impl<T> ParseResult<T> {
         use self::ParseResult::*;
         match *self {
             Partial => true,
-            _ => false
+            _ => false,
         }
     }
 }
@@ -60,9 +60,7 @@ pub fn parse(mut buf: &[u8]) -> ParseResult<Request> {
         return Partial;
     }
 
-    from_utf8(buf)
-        .map(Request)
-        .into()
+    from_utf8(buf).map(Request).into()
 }
 
 #[test]

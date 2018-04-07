@@ -54,5 +54,7 @@ fn main() {
 
     // println!("square sum: {}", my_module::square_sum(10));
 
-    my_module::echo_server();
+    // my_module::echo_server();
+
+    my_module::env_gcd();
 }

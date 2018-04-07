@@ -34,6 +34,7 @@ pub use self::pointer::Messenger;
 pub use self::pointer::LimitTracker;
 pub use self::first_edition_japanese::references_and_borrowings;
 pub use self::rust_as_a_second_lang::echo_server;
+pub use self::prog_rust::env_gcd;
 
 // call mod files
 mod fibonacci;
@@ -61,3 +62,4 @@ mod functional_features;
 mod pointer;
 mod first_edition_japanese;
 mod rust_as_a_second_lang;
+mod prog_rust;
