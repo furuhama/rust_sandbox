@@ -1,5 +1,6 @@
 extern crate hello_world;
-// extern crate adder;
+extern crate adder;
+// extern crate iron_gcd;
 
 use hello_world::my_module;
 
@@ -57,4 +58,6 @@ fn main() {
     // my_module::echo_server();
 
     my_module::env_gcd();
+
+    adder::adder_print();
 }
