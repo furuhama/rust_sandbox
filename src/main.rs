@@ -60,5 +60,5 @@ fn main() {
 
     // my_module::env_gcd();
 
-    modules::env_gcd();
+    modules::start_gcd_server();
 }
