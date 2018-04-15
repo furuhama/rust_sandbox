@@ -8,8 +8,8 @@ license = "MIT"
 
 [dependencies]
 
-num = "0.1"
-rand = "0.4"
+num = "*"
+rand = "*"
 adder = { path = "adder" }
 prog_rust = { path = "prog_rust" }
 

@@ -4,7 +4,6 @@ version = "0.1.0"
 authors = ["furuhama <furuhama@users.noreply.github.com>"]
 
 [dependencies]
-iron = "0.6.0"
-mime = "0.3.5"
-router = "0.6.0"
-urlencoded = "0.6.0"
+iron = "*"
+router = "*"
+urlencoded = "*"
