@@ -1,8 +1,9 @@
 extern crate hello_world;
 extern crate adder;
-// extern crate iron_gcd;
+extern crate prog_rust;
 
 use hello_world::my_module;
+use prog_rust::modules;
 
 fn main() {
     // my_module::hello_rust();
@@ -57,7 +58,7 @@ fn main() {
 
     // my_module::echo_server();
 
-    my_module::env_gcd();
+    // my_module::env_gcd();
 
-    adder::adder_print();
+    modules::env_gcd();
 }

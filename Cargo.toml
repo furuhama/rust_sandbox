@@ -11,6 +11,7 @@ license = "MIT"
 num = "0.1"
 rand = "0.4"
 adder = { path = "adder" }
+prog_rust = { path = "prog_rust" }
 
 [profile.dev]
 
