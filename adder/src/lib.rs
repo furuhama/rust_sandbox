@@ -8,6 +8,10 @@ pub fn add_one(x: i32) -> i32 {
     x + 1
 }
 
+pub fn adder_print() {
+    println!("hoge from adder crate!");
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
