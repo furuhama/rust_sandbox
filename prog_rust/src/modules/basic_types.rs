@@ -1,3 +1,5 @@
+// basic type
+
 pub fn basic_types() {
     println!("{:?}", build_vec_verbose());
     println!("{:?}", build_vec());
