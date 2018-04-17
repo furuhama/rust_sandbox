@@ -6,7 +6,7 @@ use hello_world::my_module;
 use prog_rust::modules;
 
 fn main() {
-    // my_module::hello_rust();
+    my_module::hello_rust();
 
     // my_module::guess_the_number();
 
@@ -60,5 +60,7 @@ fn main() {
 
     // my_module::env_gcd();
 
-    modules::start_gcd_server();
+    // modules::start_gcd_server();
+
+    modules::basic_types();
 }
