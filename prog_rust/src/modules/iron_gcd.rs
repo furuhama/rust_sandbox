@@ -18,7 +18,9 @@ pub fn start_gcd_server() {
 
 fn get_form(_request: &mut Request) -> IronResult<Response> {
     let mut response = Response::new();
-    let content_type = "text/html".parse::<Mime>().expect("Failed to parse content type");
+    let content_type = "text/html"
+        .parse::<Mime>()
+        .expect("Failed to parse content type");
 
     response.set_mut(status::Ok);
     response.set_mut(content_type);
@@ -46,7 +48,7 @@ fn post_gcd(request: &mut Request) -> IronResult<Response> {
             response.set_mut(format!("Error parsing form data: {:?}\n", e));
             return Ok(response);
         }
-        Ok(map) => map
+        Ok(map) => map,
     };
 
     let unparsed_numbers = match form_data.get("n") {
@@ -55,7 +57,7 @@ fn post_gcd(request: &mut Request) -> IronResult<Response> {
             response.set_mut(format!("form data has no 'n' parameter\n"));
             return Ok(response);
         }
-        Some(nums) => nums
+        Some(nums) => nums,
     };
 
     let mut numbers = Vec::new();
@@ -63,10 +65,15 @@ fn post_gcd(request: &mut Request) -> IronResult<Response> {
         match u64::from_str(&unparsed) {
             Err(_) => {
                 response.set_mut(status::BadRequest);
-                response.set_mut(format!("Value for 'n' parameter is not a number: {:?}\n", unparsed));
+                response.set_mut(format!(
+                    "Value for 'n' parameter is not a number: {:?}\n",
+                    unparsed
+                ));
                 return Ok(response);
             }
-            Ok(n) => { numbers.push(n); }
+            Ok(n) => {
+                numbers.push(n);
+            }
         }
     }
 
@@ -75,10 +82,15 @@ fn post_gcd(request: &mut Request) -> IronResult<Response> {
         d = gcd(d, *m)
     }
 
-    let content_type = "text/html".parse::<Mime>().expect("Failed to parse content type");
+    let content_type = "text/html"
+        .parse::<Mime>()
+        .expect("Failed to parse content type");
     response.set_mut(status::Ok);
     response.set_mut(content_type);
-    response.set_mut(format!("The Greatest common divisor of the numbers {:?} is <b>{}</b>\n", numbers, d));
+    response.set_mut(format!(
+        "The Greatest common divisor of the numbers {:?} is <b>{}</b>\n",
+        numbers, d
+    ));
     Ok(response)
 }
 
