@@ -34,6 +34,7 @@ pub use self::pointer::pointers;
 pub use self::pointer::LimitTracker;
 pub use self::pointer::Messenger;
 pub use self::rust_as_a_second_lang::echo_server;
+pub use self::design_pattern::command;
 
 // call mod files
 mod basic_concepts;
@@ -61,3 +62,4 @@ mod functional_features;
 mod minigrep;
 mod pointer;
 mod rust_as_a_second_lang;
+mod design_pattern;

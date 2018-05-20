@@ -1,5 +1,5 @@
-extern crate hello_world;
 extern crate adder;
+extern crate hello_world;
 extern crate prog_rust;
 
 use hello_world::my_module;
@@ -63,4 +63,6 @@ fn main() {
     // modules::start_gcd_server();
 
     modules::basic_types();
+
+    my_module::command();
 }
