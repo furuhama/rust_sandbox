@@ -65,4 +65,6 @@ fn main() {
     modules::basic_types();
 
     my_module::command();
+
+    my_module::state();
 }

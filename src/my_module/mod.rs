@@ -35,6 +35,7 @@ pub use self::pointer::LimitTracker;
 pub use self::pointer::Messenger;
 pub use self::rust_as_a_second_lang::echo_server;
 pub use self::design_pattern::command;
+pub use self::design_pattern::state;
 
 // call mod files
 mod basic_concepts;
