@@ -36,6 +36,7 @@ pub use self::pointer::Messenger;
 pub use self::rust_as_a_second_lang::echo_server;
 pub use self::design_pattern::command;
 pub use self::design_pattern::state;
+pub use self::libc::run_libc;
 
 // call mod files
 mod basic_concepts;
@@ -64,3 +65,4 @@ mod minigrep;
 mod pointer;
 mod rust_as_a_second_lang;
 mod design_pattern;
+mod libc;
