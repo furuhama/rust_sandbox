@@ -68,5 +68,7 @@ fn main() {
 
     // my_module::state();
 
-    my_module::run_libc();
+    // my_module::run_libc();
+
+    modules::table();
 }
