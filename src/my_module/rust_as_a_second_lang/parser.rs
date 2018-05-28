@@ -10,6 +10,7 @@ pub enum ParseResult<T> {
 }
 
 impl<T> ParseResult<T> {
+    #[allow(dead_code)]
     fn is_complete(&self) -> bool {
         use self::ParseResult::*;
         match *self {
@@ -18,6 +19,7 @@ impl<T> ParseResult<T> {
         }
     }
 
+    #[allow(dead_code)]
     fn is_partial(&self) -> bool {
         use self::ParseResult::*;
         match *self {
@@ -39,6 +41,7 @@ impl<T, E> From<Result<T, E>> for ParseResult<T> {
 
 pub struct Request<'a>(pub &'a str);
 
+#[allow(dead_code)]
 pub fn parse(mut buf: &[u8]) -> ParseResult<Request> {
     use self::ParseResult::*;
 
