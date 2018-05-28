@@ -71,4 +71,6 @@ fn main() {
     // my_module::run_libc();
 
     modules::table();
+
+    modules::references();
 }
