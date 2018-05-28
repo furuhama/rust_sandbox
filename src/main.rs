@@ -67,4 +67,6 @@ fn main() {
     my_module::command();
 
     my_module::state();
+
+    my_module::run_libc();
 }

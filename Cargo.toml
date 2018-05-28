@@ -10,8 +10,13 @@ license = "MIT"
 
 num = "*"
 rand = "*"
+libc = "*"
 adder = { path = "adder" }
 prog_rust = { path = "prog_rust" }
+
+[build-dependencies]
+
+cc = "*"
 
 [profile.dev]
 
