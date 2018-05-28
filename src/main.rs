@@ -62,11 +62,11 @@ fn main() {
 
     // modules::start_gcd_server();
 
-    modules::basic_types();
+    // modules::basic_types();
 
-    my_module::command();
+    // my_module::command();
 
-    my_module::state();
+    // my_module::state();
 
     my_module::run_libc();
 }

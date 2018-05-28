@@ -16,7 +16,7 @@ prog_rust = { path = "prog_rust" }
 
 [build-dependencies]
 
-cc = "*"
+# cc = "*"
 
 [profile.dev]
 
