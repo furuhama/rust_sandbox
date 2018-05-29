@@ -16,4 +16,33 @@ pub fn references() {
     let rr = &r;
     let rrr = &rr;
     assert_eq!(rrr.y, 3792);
+    assert_eq!(rr.y, 3792);
+
+    test_static();
+    test_lifetime();
+}
+
+fn test_static() {
+    static mut ST: &i32 = &10;
+
+    fn f(p: &'static i32) {
+        unsafe {
+            ST = p;
+        }
+    }
+
+    static CONS: i32 = 100;
+    f(&CONS);
+
+    println!("{}", unsafe { ST });
+}
+
+fn test_lifetime() {
+    fn g<'a>(p: &'a mut i32) {
+        *p += 10;
+    }
+
+    let mut x = 3;
+    g(&mut x);
+    println!("{}", x);
 }
