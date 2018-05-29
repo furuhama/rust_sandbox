@@ -20,6 +20,7 @@ pub fn references() {
 
     test_static();
     test_lifetime();
+    return_ref();
 }
 
 fn test_static() {
@@ -45,4 +46,22 @@ fn test_lifetime() {
     let mut x = 3;
     g(&mut x);
     println!("{}", x);
+}
+
+fn return_ref() {
+    let vec = [1, 3, 4, 2, 4, 3, 0, 7, 12];
+    let s;
+    s = smallest(&vec);
+
+    println!("{}", s);
+}
+
+fn smallest(v: &[i32]) -> &i32 {
+    let mut s = &v[0];
+    for r in &v[1..] {
+        if *r < *s {
+            s = r;
+        }
+    }
+    s
 }
