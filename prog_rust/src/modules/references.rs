@@ -21,6 +21,7 @@ pub fn references() {
     test_static();
     test_lifetime();
     return_ref();
+    struct_with_ref();
 }
 
 fn test_static() {
@@ -64,4 +65,16 @@ fn smallest(v: &[i32]) -> &i32 {
         }
     }
     s
+}
+
+fn struct_with_ref() {
+    struct P<'a> {
+        q: &'a i32
+    }
+
+    let x = 10;
+    let s;
+    s = P { q: &x };
+
+    assert_eq!(*s.q, 10);
 }
