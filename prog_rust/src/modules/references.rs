@@ -22,6 +22,7 @@ pub fn references() {
     test_lifetime();
     return_ref();
     struct_with_ref();
+    two_different_lifetimes();
 }
 
 fn test_static() {
@@ -77,4 +78,20 @@ fn struct_with_ref() {
     s = P { q: &x };
 
     assert_eq!(*s.q, 10);
+}
+
+fn two_different_lifetimes() {
+    struct S<'a, 'b> {
+        x: &'a i32,
+        y: &'b i32,
+    }
+
+    fn sum_r_xy(r: &i32, s: S) -> i32 {
+        r + s.x + s.y
+    }
+
+    let r = &10;
+    let s = S { x: &20, y: &30 };
+
+    println!("{}", sum_r_xy(r, s));
 }
