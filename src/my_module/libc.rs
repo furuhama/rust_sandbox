@@ -12,6 +12,6 @@ pub fn run_libc() {
             x = plusone(x);
         }
 
-        println!("{}", x);
+        println!("run_libc() result: {}", x);
     }
 }
