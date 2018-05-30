@@ -23,6 +23,7 @@ pub fn references() {
     return_ref();
     struct_with_ref();
     two_different_lifetimes();
+    struct_impl();
 }
 
 fn test_static() {
@@ -94,4 +95,25 @@ fn two_different_lifetimes() {
     let s = S { x: &20, y: &30 };
 
     println!("{}", sum_r_xy(r, s));
+}
+
+fn struct_impl() {
+    struct StringTable {
+        elements: Vec<String>,
+    }
+
+    impl StringTable {
+        fn find_by_prefix(&self, prefix: &str) -> Option<&String> {
+            for i in 0..self.elements.len() {
+                if self.elements[i].starts_with(prefix) {
+                    return Some(&self.elements[i]);
+                }
+            }
+            None
+        }
+    }
+
+    let s = StringTable { elements: vec!["hoge".to_string(), "fuga".to_string(), "piyo".to_string()] };
+    let p = &"ho";
+    println!("{}", s.find_by_prefix(p).unwrap());
 }
