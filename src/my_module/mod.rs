@@ -34,8 +34,6 @@ pub use self::pointer::pointers;
 pub use self::pointer::LimitTracker;
 pub use self::pointer::Messenger;
 pub use self::rust_as_a_second_lang::echo_server;
-pub use self::design_pattern::command;
-pub use self::design_pattern::state;
 pub use self::libc::run_libc;
 pub use self::pattern_match::pattern_matching;
 
@@ -65,6 +63,5 @@ mod functional_features;
 mod minigrep;
 mod pointer;
 mod rust_as_a_second_lang;
-mod design_pattern;
 mod libc;
 mod pattern_match;
