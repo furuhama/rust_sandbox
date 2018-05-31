@@ -73,4 +73,6 @@ fn main() {
     my_module::run_libc();
 
     modules::references();
+
+    my_module::pattern_matching();
 }

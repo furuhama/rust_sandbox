@@ -37,6 +37,7 @@ pub use self::rust_as_a_second_lang::echo_server;
 pub use self::design_pattern::command;
 pub use self::design_pattern::state;
 pub use self::libc::run_libc;
+pub use self::pattern_match::pattern_matching;
 
 // call mod files
 mod basic_concepts;
@@ -66,3 +67,4 @@ mod pointer;
 mod rust_as_a_second_lang;
 mod design_pattern;
 mod libc;
+mod pattern_match;
