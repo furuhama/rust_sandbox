@@ -1,5 +1,6 @@
 // match
 
+#[allow(dead_code)]
 #[derive(Debug)]
 enum UsState {
     Alabama,
@@ -7,6 +8,7 @@ enum UsState {
     // ...etc
 }
 
+#[allow(dead_code)]
 enum Coin {
     Penny,
     Nickel,

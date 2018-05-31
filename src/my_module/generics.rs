@@ -44,7 +44,7 @@ pub fn generics() {
 }
 
 fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
-    let mut largest = list [0];
+    let mut largest = list[0];
 
     for &item in list.iter() {
         if item > largest {
@@ -93,6 +93,7 @@ impl Summarizable for NewsArticle {
     }
 }
 
+#[allow(dead_code)]
 struct Tweet {
     username: String,
     content: String,

@@ -33,10 +33,12 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     }
 }
 
+#[allow(dead_code)]
 struct ImportantExcerpt<'a> {
     part: &'a str,
 }
 
+#[allow(dead_code)]
 impl<'a> ImportantExcerpt<'a> {
     fn level(&self) -> i32 {
         3
@@ -48,7 +50,10 @@ impl<'a> ImportantExcerpt<'a> {
     }
 }
 
-fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str where T: Display
+#[allow(dead_code)]
+fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str
+where
+    T: Display,
 {
     println!("Announcement! {}", ann);
     if x.len() > y.len() {
