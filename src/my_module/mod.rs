@@ -35,6 +35,7 @@ pub use self::pointer::Messenger;
 pub use self::rust_as_a_second_lang::echo_server;
 pub use self::libc::run_libc;
 pub use self::pattern_match::pattern_matching;
+pub use self::monkey_patch::monkey_patch;
 
 // call mod files
 mod basic_concepts;
@@ -64,3 +65,4 @@ mod pointer;
 mod rust_as_a_second_lang;
 mod libc;
 mod pattern_match;
+mod monkey_patch;
