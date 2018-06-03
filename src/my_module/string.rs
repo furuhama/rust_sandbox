@@ -10,14 +10,10 @@ pub fn string() {
     let s = data.to_string();
     println!("{}", s);
 
-    let mut s1 = String::from("hoge");
-    s1.push_str("fuga");
-    println!("{}", s1);
-
     let mut s2 = String::from("furuhama");
     let s3 = "piyomaru";
     s2.push_str(&s3); // use memory of s2, but literal is s3
-    println!("s3 is {}", s3);
+    println!("s2 is {}, s3 is {}", s2, s3);
 
     let mut s4 = String::from("くそわろ");
     s4.push('た'); // this should be single quote
