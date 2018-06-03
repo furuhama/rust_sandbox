@@ -2,7 +2,9 @@ extern crate adder;
 extern crate hello_world;
 extern crate prog_rust;
 
+#[allow(unused_imports)]
 use hello_world::my_module;
+#[allow(unused_imports)]
 use prog_rust::modules;
 
 fn main() {
