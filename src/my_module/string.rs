@@ -32,6 +32,11 @@ pub fn string() {
     let s12 = format!("{}-{}-{}", s8, s9, s10);
     println!("{}", s12);
 
+    // deep copy for String
+    let target = String::from("にゃーん");
+    let copy = target.clone();
+    println!("target: {}, copy: {}", target, copy);
+
     // Get length of String
     let len = String::from("long goodbye").len();
     println!("{}", len);
