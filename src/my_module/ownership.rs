@@ -6,22 +6,26 @@ pub fn practice_ownership() {
 
     s.push_str(", rust!");
 
-    // String move its ownership
+    // String's ownership is moved to this function
     takes_ownership(s);
 
-    // integer makes its copy automatically
+    // integer makes its copy automatically,
+    // because integer (like i32) types have Copy trait
+    // (having Copy trait means its value is stored on stack memory)
     let x = 5;
     makes_copy(x);
 
-    // from inside function, ownership moved
+    // ownership moves from inside this function to local variable s2
     let s2 = gives_ownership();
 
-    // move ownership from s2 to s3
+    // ownership moves from s2 to s3
     let s3 = take_and_give_back(s2);
 
-    // to calculate length
-    // Pattern 1: move String ownership to function once,
-    // and return String & usize as a tuple
+    // To calculate length
+
+    // Pattern 1: String ownership moves from s3 to function once,
+    // and it returns to s4 and len as a tuple consisting of String and usize
+    // (NOTE: we can set some variables at once by using tuple like this)
     let (s4, len) = return_string_and_length(s3);
 
     println!("The length of '{}' is {}", s4, len);
@@ -33,7 +37,8 @@ pub fn practice_ownership() {
     println!("The length of '{}' is {}", s5, length);
 
     // Mutable & borrowing
-    // change String, not moving ownership
+    // this function changes String value
+    // without moving its ownership (just by mutable borrowing)
     let mut s6 = String::from("hello");
     change_str(&mut s6);
     println!("{}", s6);
