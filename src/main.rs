@@ -38,7 +38,7 @@ fn main() {
 
     // my_module::vector();
 
-    // my_module::string();
+    my_module::string();
 
     // my_module::hash_map();
 
@@ -72,11 +72,11 @@ fn main() {
 
     // modules::table();
 
-    my_module::run_libc();
+    // my_module::run_libc();
 
-    modules::references();
+    // modules::references();
 
-    my_module::pattern_matching();
+    // my_module::pattern_matching();
 
-    my_module::monkey_patch();
+    // my_module::monkey_patch();
 }
