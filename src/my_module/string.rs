@@ -1,7 +1,9 @@
-// String is a data type stored at heap memory.
+// String
+//
+// String is a data type which value is stored on heap memory and has reference to its value on stack memory.
 // String type can be changed at runtime,
 // and it does not have to be fixed at compile time.
-// (On the other hand, str type is stored at stack memory.)
+// (On the other hand, str type is stored on stack memory.)
 
 pub fn string() {
     let data = "initial contents";
