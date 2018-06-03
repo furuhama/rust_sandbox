@@ -32,17 +32,21 @@ pub fn string() {
     let s12 = format!("{}-{}-{}", s8, s9, s10);
     println!("{}", s12);
 
+    // Get length of String
     let len = String::from("long goodbye").len();
     println!("{}", len);
 
+    // String as a slice
     let hello = "Здравствуйте";
     let hello_part = &hello[0..4];
     println!("{}", hello_part);
 
+    // Iterate str by chars
     for c in "नमस्ते".chars() {
         println!("{}", c);
     }
 
+    // Iterate str by bytes
     for b in "にゃーん".bytes() {
         println!("{}", b);
     }
