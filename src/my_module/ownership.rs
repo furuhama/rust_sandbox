@@ -42,6 +42,15 @@ pub fn practice_ownership() {
     let mut s6 = String::from("hello");
     change_str(&mut s6);
     println!("{}", s6);
+
+    let v: Vec<u64> = vec![1, 2, 3, 4];
+    for elem in &v {
+        ref_print(*elem);
+    }
+
+    fn ref_print(num: u64) {
+        println!("{}", num);
+    }
 }
 
 fn takes_ownership(some_string: String) {

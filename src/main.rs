@@ -22,7 +22,7 @@ fn main() {
 
     // my_module::condition_controller();
 
-    // my_module::practice_ownership();
+    my_module::practice_ownership();
 
     // my_module::slice();
 
@@ -38,7 +38,7 @@ fn main() {
 
     // my_module::vector();
 
-    my_module::string();
+    // my_module::string();
 
     // my_module::hash_map();
 
