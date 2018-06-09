@@ -32,7 +32,7 @@ pub fn practice_ownership() {
 
     // Pattern 2: Use reference (it is called `borrowing` in Rust)
     let s5 = gives_ownership();
-    let length = use_reference(&s5);
+    let length = use_reference_to_calculate_length(&s5);
 
     println!("The length of '{}' is {}", s5, length);
 
@@ -77,7 +77,7 @@ fn return_string_and_length(s: String) -> (String, usize) {
     (s, length)
 }
 
-fn use_reference(s: &String) -> usize {
+fn use_reference_to_calculate_length(s: &String) -> usize {
     s.len()
 }
 
