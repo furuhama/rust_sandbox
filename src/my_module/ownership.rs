@@ -78,6 +78,8 @@ fn return_string_and_length(s: String) -> (String, usize) {
 }
 
 fn use_reference_to_calculate_length(s: &String) -> usize {
+    // just referencing String type value
+    // it is called `borrowing` to use reference from functions
     s.len()
 }
 
