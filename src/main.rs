@@ -22,9 +22,9 @@ fn main() {
 
     // my_module::condition_controller();
 
-    my_module::practice_ownership();
+    // my_module::practice_ownership();
 
-    // my_module::slice();
+    my_module::slice();
 
     // my_module::make_struct();
 

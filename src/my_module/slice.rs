@@ -31,8 +31,12 @@ pub fn slice() {
     for e in arr_slice {
         println!("{}", e);
     }
+
+    str_slice();
 }
 
+// it could work well
+// however, returned value `s.len()` has no longer a mean if `s` is dropped
 fn first_word_index(s: &String) -> usize {
     let bytes = s.as_bytes();
 
@@ -67,4 +71,12 @@ fn first_word_str(s: &str) -> &str {
     }
 
     &s[..]
+}
+
+// str & String type's slices are both called `&str`
+fn str_slice() {
+    let s = "hogehoge";
+    let slice = &s[0..4];
+
+    println!("{}", slice);
 }
