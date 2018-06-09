@@ -75,6 +75,7 @@ fn first_word_str(s: &str) -> &str {
 
 // str & String type's slices are both called `&str`
 fn str_slice() {
+    // `s` also has `&str` type
     let s = "hogehoge";
     let slice = &s[0..4];
 
