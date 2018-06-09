@@ -43,14 +43,9 @@ pub fn practice_ownership() {
     change_string(&mut s6);
     println!("{}", s6);
 
-    let v: Vec<u64> = vec![1, 2, 3, 4];
-    for elem in &v {
-        ref_print(*elem);
-    }
+    vec_borrowing();
 
-    fn ref_print(num: u64) {
-        println!("{}", num);
-    }
+    string_borrowing_twice();
 }
 
 fn takes_ownership(some_string: String) {
@@ -88,4 +83,28 @@ fn change_string(s: &mut String) {
     // it should be just one mutable reference for each value at highest
     // since it would cause value confliction by two or more mutable references
     s.push_str(", Rust!!!");
+}
+
+fn vec_borrowing() {
+    let v: Vec<u64> = vec![1, 2, 3, 4];
+    for elem in &v {
+        ref_print(*elem);
+    }
+
+    fn ref_print(num: u64) {
+        println!("{}", num);
+    }
+}
+
+fn string_borrowing_twice() {
+    let mut s = String::from("hoge");
+
+    {
+        let r1 = &mut s;
+        r1.push_str(" fuga");
+    }
+
+    let r2 = &mut s;
+    r2.push_str(" piyo");
+    println!("{}", r2);
 }
