@@ -41,6 +41,10 @@ pub fn slice() {
     }
 
     str_slice();
+
+    // primitive static array
+    let a: [i32; 4] = [1, 2, 5, 86];
+    println!("{:?}", a);
 }
 
 // it could work well
