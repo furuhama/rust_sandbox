@@ -39,8 +39,8 @@ pub fn practice_ownership() {
     // Mutable & borrowing
     // this function changes String value
     // without moving its ownership (just by mutable borrowing)
-    let mut s6 = String::from("hello");
-    change_str(&mut s6);
+    let mut s6 = String::from("Hello");
+    change_string(&mut s6);
     println!("{}", s6);
 
     let v: Vec<u64> = vec![1, 2, 3, 4];
@@ -83,6 +83,6 @@ fn use_reference_to_calculate_length(s: &String) -> usize {
     s.len()
 }
 
-fn change_str(s: &mut String) {
+fn change_string(s: &mut String) {
     s.push_str(", Rust!!!");
 }
