@@ -21,8 +21,16 @@ pub fn slice() {
 
     // use standard String(not String::from) as argument
     let s3 = "star wars";
-    let s3_first = first_word_str(&s3);
+    // first_word_str argument can be both `s3` and `&s3`
+    let s3_first = first_word_str(s3);
     println!("{}", s3_first);
+
+    let s4 = String::from("nyan hoge fuga");
+    // first_word_str argument should be `&s4`
+    // because s4 type is String
+    // (the argument type should be &str)
+    let s4_first = first_word_str(&s4);
+    println!("{}", s4_first);
 
     // slice from int array
     let arr = [1, 2, 3, 4, 5, 6, 7];
@@ -61,6 +69,7 @@ fn first_word(s: &String) -> &str {
     &s[..]
 }
 
+// this function can set String & &str type value for its argument
 fn first_word_str(s: &str) -> &str {
     let bytes = s.as_bytes();
 
