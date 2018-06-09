@@ -84,5 +84,8 @@ fn use_reference_to_calculate_length(s: &String) -> usize {
 }
 
 fn change_string(s: &mut String) {
+    // mutable referencing String value
+    // it should be just one mutable reference for each value at highest
+    // since it would cause value confliction by two or more mutable references
     s.push_str(", Rust!!!");
 }
