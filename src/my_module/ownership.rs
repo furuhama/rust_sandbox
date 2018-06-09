@@ -62,10 +62,9 @@ fn makes_copy(some_int: i32) {
 }
 
 fn gives_ownership() -> String {
-    let s = String::from("hoge piyo");
     // when this function returns a value,
     // the ownership of the value also moves to outside this function
-    s
+    String::from("hoge piyo")
 }
 
 fn take_and_give_back(a_string: String) -> String {
