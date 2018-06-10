@@ -44,9 +44,9 @@ fn main() {
 
     // my_module::error_handling();
 
-    my_module::generics();
+    // my_module::generics();
 
-    // my_module::lifetime();
+    my_module::lifetime();
 
     // my_module::minigrep();
 
@@ -76,7 +76,7 @@ fn main() {
 
     // modules::references();
 
-    my_module::pattern_matching();
+    // my_module::pattern_matching();
 
     // my_module::monkey_patch();
 }
