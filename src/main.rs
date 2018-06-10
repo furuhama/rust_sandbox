@@ -24,11 +24,11 @@ fn main() {
 
     // my_module::practice_ownership();
 
-    my_module::slice();
+    // my_module::slice();
 
     // my_module::make_struct();
 
-    // my_module::struct_example();
+    my_module::struct_example();
 
     // my_module::method_syntax();
 

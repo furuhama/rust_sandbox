@@ -10,6 +10,7 @@ pub fn struct_example() {
     );
 
     // use tuple
+    // this is better than area calculation with two other variables
     let r1 = (35, 59);
     println!(
         "The area of the rectangle is {} square pixels.",
@@ -17,6 +18,8 @@ pub fn struct_example() {
     );
 
     // use struct
+    // this is better than calc with tuple,
+    // since struct can give means to its variables
     let r2 = Rectangle {
         width: 45,
         height: 102,
