@@ -31,6 +31,8 @@ pub fn struct_example() {
 
     // try to debug
     println!("Rectangle: {:#?}", r2);
+
+    println!("Rectangle method: {}", r2.area());
 }
 
 fn area(width: u32, height: u32) -> u32 {
@@ -45,6 +47,12 @@ fn area_rect_tuple(dimensions: (u32, u32)) -> u32 {
 struct Rectangle {
     width: u32,
     height: u32,
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
 }
 
 fn area_struct(rectangle: &Rectangle) -> u32 {
