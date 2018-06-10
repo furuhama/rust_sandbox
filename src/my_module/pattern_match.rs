@@ -8,4 +8,19 @@ pub fn pattern_matching() {
     };
 
     println!("the result is: {}", unwrapped);
+
+    conditional_arm();
+}
+
+fn conditional_arm() {
+    let target = Some(10);
+    let _ = match target {
+        Some(ref n) if n%10 == 0 => {
+            println!("the number can be divided by 10!: {}", n);
+        },
+        Some(n) => {
+            println!("the number: {}", n);
+        },
+        _ => {},
+    };
 }
