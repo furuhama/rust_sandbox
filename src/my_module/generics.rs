@@ -1,6 +1,7 @@
 // generic data types
 
 use std::cmp::PartialOrd;
+use std::fmt::Display;
 
 pub fn generics() {
     // largest function
@@ -202,4 +203,35 @@ fn notify<T: Summarizable>(item: &T) {
 
 fn notify_with_where_notation<T>(item: &T) where T: Summarizable {
     println!("notification: {}", item.summary())
+}
+
+#[allow(dead_code)]
+struct Pair<T> {
+    x: T,
+    y: T,
+}
+
+#[allow(dead_code)]
+impl<T> Pair<T> {
+    fn new(x: T, y: T) -> Self {
+        Self {
+            x,
+            y,
+        }
+    }
+}
+
+#[allow(dead_code)]
+// this can be written as below
+// impl<T: Display + PartialOrd> Pair<T> {
+//     ...
+// }
+impl<T> Pair<T> where T: Display + PartialOrd {
+    fn cmd_display(&self) {
+        if self.x >= self.y {
+            println!("Larger is x: {}", self.x);
+        } else {
+            println!("Larger is y: {}", self.y);
+        }
+    }
 }
