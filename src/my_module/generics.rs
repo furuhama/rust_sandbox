@@ -46,6 +46,14 @@ pub fn generics() {
     println!("{}", no_body.summary());
     notify(&no_body);
     notify_with_where_notation(&no_body);
+
+    let simple_pair = Pair::new("hoge", "fuga");
+    simple_pair.cmd_display();
+
+    #[allow(unused)]
+    let pair_with_no_trait = Pair::new(NoBody {}, NoBody {});
+    // and, this could be a compile error! ->
+    // pair_with_no_trait.cmd_display();
 }
 
 // define the function to find largest value in a list
