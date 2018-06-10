@@ -18,6 +18,7 @@ impl Rectangle {
     }
 
     // this function is called associated function
+    // constructor of Rectangle struct
     fn square(size: u32) -> Rectangle {
         Rectangle {
             width: size,

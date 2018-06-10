@@ -28,9 +28,9 @@ fn main() {
 
     // my_module::make_struct();
 
-    my_module::struct_example();
+    // my_module::struct_example();
 
-    // my_module::method_syntax();
+    my_module::method_syntax();
 
     // my_module::define_enum();
 
