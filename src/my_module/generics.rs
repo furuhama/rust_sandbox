@@ -89,17 +89,26 @@ fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
     largest
 }
 
+// point struct
+
 #[derive(Debug)]
 struct Point<T, U> {
     x: T,
     y: U,
 }
 
+// this first `<T, U>` tokens is used to detect
+// which struct (which is named `Point`) is added some implementations
+// == to identify which struct is the target when the same name structs defined at the same time
 impl<T, U> Point<T, U> {
     fn value_x(&self) -> &T {
         &self.x
     }
 }
+
+//
+// struct, trait, impl usages
+//
 
 trait Summarizable {
     //basic implementations
