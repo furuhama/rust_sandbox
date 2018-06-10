@@ -40,7 +40,8 @@ pub fn generics() {
 
     let no_body = NoBody {};
     println!("{}", no_body.summary());
-    notify(no_body);
+    notify(&no_body);
+    notify_with_where_notation(&no_body);
 }
 
 // define the function to find largest value in a list
@@ -162,7 +163,11 @@ impl Summarizable for NoBody {
     }
 }
 
-// function bounding trait
-fn notify<T: Summarizable>(item: T) {
+// function bounding trait (this is also known as `トレイト境界`)
+fn notify<T: Summarizable>(item: &T) {
+    println!("notification: {}", item.summary())
+}
+
+fn notify_with_where_notation<T>(item: &T) where T: Summarizable {
     println!("notification: {}", item.summary())
 }
