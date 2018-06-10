@@ -43,7 +43,12 @@ pub fn generics() {
     notify(no_body);
 }
 
-fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
+// define the function to find largest value in a list
+// largest function for both i32 & char are defined
+// this implementation is against DRY principle
+// therefore, try to use generics later
+#[allow(dead_code)]
+fn largest_i32(list: &[i32]) -> i32 {
     let mut largest = list[0];
 
     for &item in list.iter() {
@@ -51,6 +56,36 @@ fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
             largest = item;
         }
     }
+
+    largest
+}
+
+#[allow(dead_code)]
+fn largest_char(list: &[char]) -> char {
+    let mut largest = list[0];
+
+    for &item in list.iter() {
+        if item > largest {
+            largest = item;
+        }
+    }
+
+    largest
+}
+
+// this `largest` function is the definition witha a generics using pattern
+fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
+    // to get value by index & to set(bind) the same value for other variable,
+    // the type `T` should have Copy trait
+    let mut largest = list[0];
+
+    for &item in list.iter() {
+        // to compare two values, the type `T` should have PartialOrd trait
+        if item > largest {
+            largest = item;
+        }
+    }
+
     largest
 }
 

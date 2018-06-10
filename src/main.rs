@@ -30,7 +30,7 @@ fn main() {
 
     // my_module::struct_example();
 
-    my_module::method_syntax();
+    // my_module::method_syntax();
 
     // my_module::define_enum();
 
@@ -44,7 +44,7 @@ fn main() {
 
     // my_module::error_handling();
 
-    // my_module::generics();
+    my_module::generics();
 
     // my_module::lifetime();
 
