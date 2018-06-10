@@ -12,6 +12,9 @@ pub fn generics() {
     let result = largest(&char_list);
     println!("largest char: {}", result);
 
+    let num_list = vec![1, 34, 384752, 34, -23, 4872];
+    println!("largest i32: {}", largest_with_ref(&num_list));
+
     // Point Struct
     let integer = Point { x: 1, y: 10 };
     let float = Point { x: 0.5, y: 23.58 };
@@ -83,6 +86,35 @@ fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
     for &item in list.iter() {
         // to compare two values, the type `T` should have PartialOrd trait
         if item > largest {
+            largest = item;
+        }
+    }
+
+    largest
+}
+
+// this maybe slower and expensive function than `largest` with Copy trait
+#[allow(dead_code)]
+fn largest_with_clone_trait<T: PartialOrd + Clone>(list: &[T]) -> T {
+    let mut largest = list[0].clone();
+
+    for item in list.iter() {
+        if *item > largest {
+            largest = item.clone();
+        }
+    }
+
+    largest
+}
+
+// this maybe smart implementation of `largest` function
+// this uses a reference to list & returns the reference to the largest value in list
+#[allow(dead_code)]
+fn largest_with_ref<T: PartialOrd>(list: &[T]) -> &T {
+    let mut largest = &list[0];
+
+    for item in list.iter() {
+        if *item > *largest {
             largest = item;
         }
     }
