@@ -24,12 +24,15 @@ pub fn lifetime() {
         println!("The longest string is: {}", r);
     }
 
-    // let i = ImportantExcerpt { part: "nyaaaaaaaaaan" };
-    // let _ = i.announcement_and_return_part();
+    let i = ImportantExcerpt { part: "nyaaaaaaaaaan" };
+    println!("{}", i.level());
+    let s3 = String::from("sleepy");
+    let _ = i.announcement_and_return_part(s3.as_str());
 
-    // let string3 = "xyz";
-    // let string4 = "xyzhogehoge";
-    // longest_with_an_announcement(string3, string4, i);
+    let string3 = "xyz";
+    let string4 = "xyzhogehoge";
+    let disp = 100;
+    longest_with_an_announcement(string3, string4, disp);
 }
 
 // there are four lifetime annotations 'a
@@ -49,24 +52,24 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     }
 }
 
-#[allow(dead_code)]
+// the explicit lifetime declaration is needed if the struct contains a reference
+// this annotation means the instance of this struct could not live longer than the reference
 struct ImportantExcerpt<'a> {
     part: &'a str,
 }
 
-#[allow(dead_code)]
 impl<'a> ImportantExcerpt<'a> {
     fn level(&self) -> i32 {
         3
     }
 
-    fn announce_and_return_part(&self, announcement: &str) -> &str {
+    fn announcement_and_return_part(&self, announcement: &str) -> &str {
         println!("Attention please: {}", announcement);
         self.part
     }
 }
 
-#[allow(dead_code)]
+// this is a function with generics, lifetime parameter and bouding trait
 fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str
 where
     T: Display,
