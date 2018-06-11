@@ -13,7 +13,7 @@ pub fn adder_print() {
 }
 
 #[cfg(test)]
-mod tests {
+pub mod tests {
     use super::*;
 
     #[test]

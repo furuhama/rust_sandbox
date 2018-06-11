@@ -1,8 +1,8 @@
 // test for minigrep
 
 #[cfg(test)]
-mod test {
-    use my_module;
+pub mod test {
+    use minimodule;
 
     #[test]
     fn one_result() {
@@ -14,7 +14,7 @@ Pick three.";
 
         assert_eq!(
             vec!["safe, fast, productive."],
-            my_module::search(query, contents)
+            minimodule::search(query, contents)
         );
     }
 
@@ -29,7 +29,7 @@ Trust me.";
 
         assert_eq!(
             vec!["Rust:", "Trust me."],
-            my_module::search_case_insensitive(query, contents)
+            minimodule::search_case_insensitive(query, contents)
         )
     }
 }
