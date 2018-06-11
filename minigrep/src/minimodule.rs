@@ -83,6 +83,8 @@ fn run(config: Config) -> Result<(), Box<Error>> {
         search_case_insensitive(&config.query, &contents)
     };
 
+    println!("Results:");
+
     for line in results {
         println!("{}", line);
     }
@@ -103,17 +105,26 @@ impl Config {
             return Err("not enough arguments");
         }
 
-        // not to use clone() method
+        // not to use clone() method (it is sometimes expensive process)
         // let query = args[1].clone();
         // let filename = args[2].clone();
 
+        // skip first argument, since it is something like a turd for grepping
+        let _ = args.next();
+
         let query = match args.next() {
-            Some(arg) => arg,
+            Some(arg) => {
+                println!("Search Query: {}", arg);
+                arg
+            },
             None => return Err("Didn't get a query string"),
         };
 
         let filename = match args.next() {
-            Some(arg) => arg,
+            Some(arg) => {
+                println!("File Path: {}", arg);
+                arg
+            },
             None => return Err("Didn't get a file name"),
         };
 
