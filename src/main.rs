@@ -51,9 +51,9 @@ fn main() {
 
     // my_module::lifetime();
 
-    minimodule::minigrep();
+    // minimodule::minigrep();
 
-    // my_module::functional_features();
+    my_module::functional_features();
 
     // my_module::pointers();
 

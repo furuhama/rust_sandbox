@@ -25,7 +25,6 @@ pub use self::first_edition_japanese::references_and_borrowings;
 pub use self::functional_features::functional_features;
 pub use self::functional_features::Cacher;
 pub use self::functional_features::_Counter;
-pub use self::functional_features::square_sum;
 pub use self::pointer::pointers;
 pub use self::pointer::LimitTracker;
 pub use self::pointer::Messenger;

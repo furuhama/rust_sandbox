@@ -17,9 +17,11 @@ pub fn functional_features() {
     for val in v1_iter {
         println!("Got: {}", val);
     }
+
+    println!("square_sum: {}", square_sum(10));
 }
 
-pub fn square_sum(x: isize) -> isize {
+fn square_sum(x: isize) -> isize {
     (1..x).filter(|i| i % 2 == 0).map(|i| i * i).sum()
 }
 
@@ -32,7 +34,7 @@ fn generate_workout(intensity: u32, random_number: u32) {
     //     num
     // };
 
-    // type defined closure annotation
+    // argument type defined closure annotation
     //
     // let expensive_closure = |num: u32| -> u32 {
     //     println!("calculating slowly...");
@@ -124,5 +126,5 @@ impl Iterator for _Counter {
 // let example_closure = |x| x;
 //
 // let s = example_closure(String::from("hello"));
-// let n = example_closure(5); <- this occurs an error, cause when `s` defined
-// example_closure's type is set as String(so we can't set u32 value)
+// let n = example_closure(5); <- this occurs an error,
+// because when `s` defined, example_closure's type is set as String(so we can't set u32 value)
