@@ -17,6 +17,13 @@ pub fn lifetime() {
     let result = longest(string1.as_str(), string2);
     println!("The longest string is: {}", result);
 
+    let s1 = String::from("this is longer");
+    {
+        let s2 = String::from("shorter");
+        let r = longest(s1.as_str(), s2.as_str());
+        println!("The longest string is: {}", r);
+    }
+
     // let i = ImportantExcerpt { part: "nyaaaaaaaaaan" };
     // let _ = i.announcement_and_return_part();
 
@@ -25,6 +32,15 @@ pub fn lifetime() {
     // longest_with_an_announcement(string3, string4, i);
 }
 
+// there are four lifetime annotations 'a
+// the first 'a defines a lifetime 'a
+// the second and third 'a mean the lifetime of each argument is 'a
+// the fourth 'a means the lifetime of returned value from this function is 'a
+//
+// there is a possibility of the returned value lifetime
+// if the function has two or more reference arguments
+// and the compiler cannot find out which is the correct lifetime of returned value
+// therefore, the explicit lifetime declaration is needed
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() {
         x
