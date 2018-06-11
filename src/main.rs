@@ -1,11 +1,14 @@
 extern crate adder;
 extern crate hello_world;
 extern crate prog_rust;
+extern crate minigrep;
 
 #[allow(unused_imports)]
 use hello_world::my_module;
 #[allow(unused_imports)]
 use prog_rust::modules;
+#[allow(unused_imports)]
+use minigrep::minimodule;
 
 fn main() {
     my_module::hello_rust();
@@ -46,9 +49,9 @@ fn main() {
 
     // my_module::generics();
 
-    my_module::lifetime();
+    // my_module::lifetime();
 
-    // my_module::minigrep();
+    minimodule::minigrep();
 
     // my_module::functional_features();
 
