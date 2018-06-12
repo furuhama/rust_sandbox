@@ -1,3 +1,4 @@
+use std;
 use iron::prelude::*;
 use iron::status;
 use iron::mime::Mime;
@@ -54,7 +55,7 @@ fn post_gcd(request: &mut Request) -> IronResult<Response> {
     let unparsed_numbers = match form_data.get("n") {
         None => {
             response.set_mut(status::BadRequest);
-            response.set_mut(format!("form data has no 'n' parameter\n"));
+            response.set_mut("form data has no 'n' parameter\n".to_string());
             return Ok(response);
         }
         Some(nums) => nums,
@@ -99,11 +100,9 @@ fn gcd(mut n: u64, mut m: u64) -> u64 {
 
     while m != 0 {
         if m < n {
-            let t = m;
-            m = n;
-            n = t;
+            std::mem::swap(&mut m, &mut n);
         }
-        m = m % n;
+        m %= n;
     }
     n
 }

@@ -1,5 +1,4 @@
 use std;
-use std::io::Write;
 use std::str::FromStr;
 
 pub fn env_gcd() {
@@ -9,8 +8,8 @@ pub fn env_gcd() {
         numbers.push(u64::from_str(&arg).expect("error parsing argument"));
     }
 
-    if numbers.len() == 0 {
-        writeln!(std::io::stderr(), "Usage: gcd NUMBER...").unwrap();
+    if numbers.is_empty() {
+        eprintln!("Usage: gcd NUMBER...");
         std::process::exit(1);
     }
 
@@ -27,11 +26,9 @@ fn gcd(mut n: u64, mut m: u64) -> u64 {
 
     while m != 0 {
         if m < n {
-            let t = m;
-            m = n;
-            n = t;
+            std::mem::swap(&mut m, &mut n);
         }
-        m = m % n;
+        m %= n;
     }
     n
 }

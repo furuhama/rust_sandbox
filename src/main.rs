@@ -53,15 +53,15 @@ fn main() {
 
     // minimodule::minigrep();
 
-    my_module::functional_features();
+    // my_module::functional_features();
 
     // my_module::pointers();
 
-    my_module::references_and_borrowings();
+    // my_module::references_and_borrowings();
 
     // my_module::echo_server();
 
-    // my_module::env_gcd();
+    // modules::env_gcd();
 
     // modules::start_gcd_server();
 
@@ -75,7 +75,7 @@ fn main() {
 
     // my_module::run_libc();
 
-    // modules::references();
+    modules::references();
 
     // my_module::pattern_matching();
 

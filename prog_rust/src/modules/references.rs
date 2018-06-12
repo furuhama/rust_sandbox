@@ -3,10 +3,11 @@
 pub fn references() {
     let x = 10;
     let y = 20;
-    let mut r = &x;
-    if true {
-        r = &y;
-    }
+    let r = if true {
+        &y
+    } else {
+        &x
+    };
     assert!(*r == 20);
 
     #[allow(dead_code)]
