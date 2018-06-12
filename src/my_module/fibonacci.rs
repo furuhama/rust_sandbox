@@ -26,7 +26,7 @@ fn get_fibonacci(n: &i32) -> u64 {
             break;
         }
     }
-    return a;
+    a
 }
 
 fn get_fibonacci_tuple(n: &i32) -> i64 {
@@ -45,5 +45,5 @@ fn get_fibonacci_tuple(n: &i32) -> i64 {
             break;
         }
     }
-    return tup.0;
+    tup.0
 }

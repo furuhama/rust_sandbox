@@ -23,7 +23,7 @@ fn main() {
 
     // my_module::basic_functions();
 
-    // my_module::condition_controller();
+    my_module::condition_controller();
 
     // my_module::practice_ownership();
 
@@ -75,7 +75,7 @@ fn main() {
 
     // my_module::run_libc();
 
-    modules::references();
+    // modules::references();
 
     // my_module::pattern_matching();
 

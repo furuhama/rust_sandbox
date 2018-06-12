@@ -31,7 +31,7 @@ pub fn condition_controller() {
 
     // for loop
     let array = [10, 20, 30, 40, 50];
-    for element in array.iter() {
+    for element in &array {
         println!("array value: {}", element);
     }
 

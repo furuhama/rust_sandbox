@@ -37,16 +37,16 @@ fn using_box() {
 
     // Use MyBox like Box
     let p = 5;
-    let q = MyBox::new(p);
+    let my_box = MyBox::new(p);
 
     assert_eq!(5, p);
-    assert_eq!(5, *(q.deref())); // after defined Deref trait, these two values(5 & q) can be compared.
+    assert_eq!(5, *(my_box.deref())); // after defined Deref trait, these two values(5 & q) can be compared.
 
-    let r = MyBox::new(String::from("Rust"));
-    hello(&r);
+    let r_box = MyBox::new(String::from("Rust"));
+    hello(&r_box);
 
-    let s = MyBox2::new(String::from("Haskell"));
-    hello(&(*s)[..]);
+    let h_box = MyBox2::new(String::from("Haskell"));
+    hello(&(*h_box)[..]);
 }
 
 fn drop_trait() {

@@ -13,7 +13,7 @@ pub fn generics() {
     let result = largest(&char_list);
     println!("largest char: {}", result);
 
-    let num_list = vec![1, 34, 384752, 34, -23, 4872];
+    let num_list = vec![1, 34, 384_752, 34, -23, 4872];
     println!("largest i32: {}", largest_with_ref(&num_list));
 
     // Point Struct
@@ -175,7 +175,7 @@ impl Summarizable for NewsArticle {
         format!("{}, by {} ({})", self.headline, self.author, self.location)
     }
     fn content(&self) -> String {
-        format!("{}", self.content)
+        self.content.to_string()
     }
 }
 
@@ -192,7 +192,7 @@ impl Summarizable for Tweet {
         format!("{}: {}", self.username, self.content)
     }
     fn content(&self) -> String {
-        format!("{}", self.content)
+        self.content.to_string()
     }
 }
 

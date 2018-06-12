@@ -49,7 +49,7 @@ pub fn slice() {
 
 // it could work well
 // however, returned value `s.len()` has no longer a mean if `s` is dropped
-fn first_word_index(s: &String) -> usize {
+fn first_word_index(s: &str) -> usize {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
@@ -61,7 +61,7 @@ fn first_word_index(s: &String) -> usize {
     s.len()
 }
 
-fn first_word(s: &String) -> &str {
+fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {

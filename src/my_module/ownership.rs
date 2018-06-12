@@ -7,7 +7,7 @@ pub fn practice_ownership() {
     s.push_str(", rust!");
 
     // String's ownership is moved to this function
-    takes_ownership(s);
+    takes_ownership(&s);
 
     // integer makes its copy automatically,
     // because integer (like i32) types have Copy trait
@@ -48,7 +48,7 @@ pub fn practice_ownership() {
     string_borrowing_twice();
 }
 
-fn takes_ownership(some_string: String) {
+fn takes_ownership(some_string: &str) {
     println!("{}", some_string);
 }
 
@@ -72,7 +72,7 @@ fn return_string_and_length(s: String) -> (String, usize) {
     (s, length)
 }
 
-fn use_reference_to_calculate_length(s: &String) -> usize {
+fn use_reference_to_calculate_length(s: &str) -> usize {
     // just referencing String type value
     // it is called `borrowing` to use reference from functions
     s.len()
