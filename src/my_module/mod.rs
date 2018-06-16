@@ -33,6 +33,7 @@ pub use self::libc::run_libc;
 pub use self::pattern_match::pattern_matching;
 pub use self::monkey_patch::monkey_patch;
 pub use self::macro_test::try_macro;
+pub use self::existential::existential;
 pub use self::concurrent::concurrent;
 pub use self::concurrent::concurrent_with_channel;
 
@@ -65,4 +66,5 @@ mod libc;
 mod pattern_match;
 mod monkey_patch;
 mod macro_test;
+mod existential;
 mod concurrent;
