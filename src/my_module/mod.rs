@@ -32,6 +32,7 @@ pub use self::rust_as_a_second_lang::echo_server;
 pub use self::libc::run_libc;
 pub use self::pattern_match::pattern_matching;
 pub use self::monkey_patch::monkey_patch;
+pub use self::macro_test::try_macro;
 
 // call mod files
 mod basic_concepts;
@@ -61,3 +62,4 @@ mod rust_as_a_second_lang;
 mod libc;
 mod pattern_match;
 mod monkey_patch;
+mod macro_test;

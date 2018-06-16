@@ -80,4 +80,6 @@ fn main() {
     // my_module::pattern_matching();
 
     // my_module::monkey_patch();
+
+    my_module::try_macro();
 }
