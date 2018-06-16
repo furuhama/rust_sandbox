@@ -15,7 +15,7 @@ fn main() {
 
     // my_module::guess_the_number();
 
-    // my_module::fizzbuzz(35);
+    my_module::fizzbuzz(35);
 
     // my_module::fibonacci();
 
@@ -23,7 +23,7 @@ fn main() {
 
     // my_module::basic_functions();
 
-    my_module::condition_controller();
+    // my_module::condition_controller();
 
     // my_module::practice_ownership();
 
@@ -81,5 +81,5 @@ fn main() {
 
     // my_module::monkey_patch();
 
-    my_module::try_macro();
+    // my_module::try_macro();
 }
