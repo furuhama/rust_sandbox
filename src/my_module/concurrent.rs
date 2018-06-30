@@ -1,6 +1,7 @@
 use std::sync::{Arc, Mutex};
 use std::thread;
 use std::time::Duration;
+use std::sync::mpsc;
 
 pub fn concurrent() {
     let data = Arc::new(Mutex::new(vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
@@ -32,4 +33,27 @@ pub fn concurrent() {
     //   #=> [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     // when you do not wait enough
     //   #=> Mutex { data: <locked> }
+}
+
+pub fn concurrent_with_channel() {
+    let data = Arc::new(Mutex::new(0));
+
+    let (tx, rx) = mpsc::channel();
+
+    for _ in 0..10 {
+        let (data, tx) = (data.clone(), tx.clone());
+
+        thread::spawn(move || {
+            let mut data = data.lock().unwrap();
+            *data += 1;
+
+            tx.send(()).unwrap();
+        });
+    }
+
+    for _ in 0..10 {
+        rx.recv().unwrap();
+    }
+
+    println!("{:?}", data);
 }

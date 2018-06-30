@@ -84,4 +84,6 @@ fn main() {
     // my_module::try_macro();
 
     my_module::concurrent();
+
+    my_module::concurrent_with_channel();
 }

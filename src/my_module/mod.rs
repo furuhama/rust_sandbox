@@ -34,6 +34,7 @@ pub use self::pattern_match::pattern_matching;
 pub use self::monkey_patch::monkey_patch;
 pub use self::macro_test::try_macro;
 pub use self::concurrent::concurrent;
+pub use self::concurrent::concurrent_with_channel;
 
 // call mod files
 mod basic_concepts;
