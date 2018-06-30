@@ -12,8 +12,8 @@ pub fn concurrent() {
             let mut data = data.lock().unwrap();
 
             // process written below is an experiment to do something which takes long time in some threads
-            if data[i]%3 == 0 {
-                thread::sleep(Duration::from_millis(50));
+            if i%3 == 0 {
+                thread::sleep(Duration::from_millis(100));
             }
 
             data[i] += 1;
@@ -36,17 +36,21 @@ pub fn concurrent() {
 }
 
 pub fn concurrent_with_channel() {
-    let data = Arc::new(Mutex::new(0));
+    let data = Arc::new(Mutex::new(vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
     let (tx, rx) = mpsc::channel();
 
-    for _ in 0..10 {
+    for i in 0..10 {
         let (data, tx) = (data.clone(), tx.clone());
 
         thread::spawn(move || {
             let mut data = data.lock().unwrap();
-            *data += 1;
 
+            if i%3 == 0 {
+                thread::sleep(Duration::from_millis(100));
+            }
+
+            data[i] += 1;
             tx.send(()).unwrap();
         });
     }
@@ -55,5 +59,7 @@ pub fn concurrent_with_channel() {
         rx.recv().unwrap();
     }
 
+    // In this pattern, you wait all threads ending by using channel (waiting at `rx.recv()` point)
+    // and you will get value correctly in this line.
     println!("{:?}", data);
 }
