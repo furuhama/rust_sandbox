@@ -56,7 +56,6 @@ pub fn error_handling() {
     println!("{:?}", my_error3);
 
     // this occurs an error
-    // `?` can be used only in function that returns a result
     // let f = File::open("hello.txt")?;
 }
 
@@ -76,9 +75,10 @@ fn read_username_from_file() -> Result<String, io::Error> {
 
 fn read_username_from_file2() -> Result<String, io::Error> {
     // `?` placed after Result value works in the same way as match control
+    // When the value is on success, `?` operator reveals the value inside Ok type.
+    // When the value is on failure, `?` operator encloses function and returns an error value.
     let mut f = File::open("hello.txt")?;
     let mut s = String::new();
-    // `?` placed after Result value works in the same way as match control
     f.read_to_string(&mut s)?;
     Ok(s)
 }
