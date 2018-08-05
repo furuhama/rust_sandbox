@@ -1,8 +1,8 @@
 // panic!
-use std::io;
-use std::io::Read;
+use std::io::{self, Read};
 use std::fs::File;
 // use std::io::ErrorKind;
+use std::num;
 
 pub fn error_handling() {
     // this returns a panic error
@@ -57,6 +57,9 @@ pub fn error_handling() {
 
     // this occurs an error
     // let f = File::open("hello.txt")?;
+
+    let my_error4 = read_number_from_file();
+    println!("{:?}", my_error4);
 }
 
 // propagating error
@@ -88,4 +91,41 @@ fn read_username_from_file3() -> Result<String, io::Error> {
     let mut s = String::new();
     File::open("hello.txt")?.read_to_string(&mut s)?;
     Ok(s)
+}
+
+fn read_number_from_file() -> Result<i32, LoadError> {
+    let mut f = File::open("hello.txt")?;
+    let mut s = String::new();
+    f.read_to_string(&mut s)?;
+    let n: i32 = s.parse()?;
+    Ok(2*n)
+}
+
+// try to error composition
+// Define LoadError (original composited error type)
+#[derive(Debug, Fail)]
+enum LoadError {
+    // set each of error type occures in this process as a argument
+    #[fail(display = "std::io::Error: {:?}", error)]
+    IOError {
+        error: io::Error,
+    },
+    #[fail(display = "std::num::ParseIntError: {:?}", error)]
+    ParseError {
+        error: num::ParseIntError,
+    },
+}
+
+// Define From trait for each error type
+// to enable `?` operator converting error type to LoadError
+impl From<io::Error> for LoadError {
+    fn from(error: io::Error) -> Self {
+        LoadError::IOError { error }
+    }
+}
+
+impl From<num::ParseIntError> for LoadError {
+    fn from(error: num::ParseIntError) -> Self {
+        LoadError::ParseError { error }
+    }
 }

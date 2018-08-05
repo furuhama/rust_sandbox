@@ -45,7 +45,7 @@ fn main() {
 
     // my_module::hash_map();
 
-    // my_module::error_handling();
+    my_module::error_handling();
 
     // my_module::generics();
 
@@ -83,9 +83,9 @@ fn main() {
 
     // my_module::try_macro();
 
-    my_module::existential();
+    // my_module::existential();
 
-    my_module::concurrent();
+    // my_module::concurrent();
 
-    my_module::concurrent_with_channel();
+    // my_module::concurrent_with_channel();
 }

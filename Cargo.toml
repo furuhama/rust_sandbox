@@ -14,6 +14,7 @@ libc = "*"
 adder = { path = "adder" }
 prog_rust = { path = "prog_rust" }
 minigrep = { path = "minigrep" }
+failure = "*"
 
 [build-dependencies]
 
