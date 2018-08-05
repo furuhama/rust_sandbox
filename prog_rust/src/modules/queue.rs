@@ -1,5 +1,5 @@
 pub fn queue() {
-    let mut q = Queue::new();
+    let mut q = Queue::<char>::new();
 
     q.push('0');
     q.push('1');
@@ -18,21 +18,21 @@ pub fn queue() {
 }
 
 // first-in, first-out
-struct Queue {
-    older: Vec<char>,
-    younger: Vec<char>,
+struct Queue<T> {
+    older: Vec<T>,
+    younger: Vec<T>,
 }
 
-impl Queue {
-    fn new() -> Queue {
+impl<T> Queue<T> {
+    fn new() -> Queue<T> {
         Queue { older: Vec::new(), younger: Vec::new() }
     }
 
-    fn push(&mut self, c: char) {
-        self.younger.push(c);
+    fn push(&mut self, t: T) {
+        self.younger.push(t);
     }
 
-    fn pop(&mut self) -> Option<char> {
+    fn pop(&mut self) -> Option<T> {
         if self.is_empty() {
             return None;
         }
