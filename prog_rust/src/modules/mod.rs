@@ -3,9 +3,11 @@ pub use self::iron_gcd::start_gcd_server;
 pub use self::basic_types::basic_types;
 pub use self::table::table;
 pub use self::references::references;
+pub use self::queue::queue;
 
 mod gcd;
 mod iron_gcd;
 mod basic_types;
 mod table;
 mod references;
+mod queue;

@@ -88,4 +88,6 @@ fn main() {
     // my_module::concurrent();
 
     // my_module::concurrent_with_channel();
+
+    modules::queue();
 }
