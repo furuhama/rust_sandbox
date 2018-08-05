@@ -1,5 +1,5 @@
-extern crate adder;
 extern crate hello_world;
+extern crate adder;
 extern crate prog_rust;
 extern crate minigrep;
 
