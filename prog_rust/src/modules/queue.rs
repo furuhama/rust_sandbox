@@ -1,5 +1,5 @@
 pub fn queue() {
-    let mut q = Queue { older: Vec::new(), younger: Vec::new() };
+    let mut q = Queue::new();
 
     q.push('0');
     q.push('1');
@@ -24,6 +24,10 @@ struct Queue {
 }
 
 impl Queue {
+    fn new() -> Queue {
+        Queue { older: Vec::new(), younger: Vec::new() }
+    }
+
     fn push(&mut self, c: char) {
         self.younger.push(c);
     }
