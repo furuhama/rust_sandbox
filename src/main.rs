@@ -45,7 +45,7 @@ fn main() {
 
     // my_module::hash_map();
 
-    my_module::error_handling();
+    // my_module::error_handling();
 
     // my_module::generics();
 
