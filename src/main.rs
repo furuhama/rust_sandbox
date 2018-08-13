@@ -90,4 +90,6 @@ fn main() {
     // my_module::concurrent_with_channel();
 
     modules::queue();
+
+    my_module::file_io();
 }

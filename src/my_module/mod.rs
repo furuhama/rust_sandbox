@@ -36,6 +36,7 @@ pub use self::macro_test::try_macro;
 pub use self::existential::existential;
 pub use self::concurrent::concurrent;
 pub use self::concurrent::concurrent_with_channel;
+pub use self::file_io::file_io;
 
 // call mod files
 mod basic_concepts;
@@ -68,3 +69,4 @@ mod monkey_patch;
 mod macro_test;
 mod existential;
 mod concurrent;
+mod file_io;
