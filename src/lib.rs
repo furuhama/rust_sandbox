@@ -16,3 +16,4 @@ pub mod my_test;
 
 #[macro_use]
 extern crate failure;
+extern crate regex;

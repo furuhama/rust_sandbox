@@ -89,7 +89,9 @@ fn main() {
 
     // my_module::concurrent_with_channel();
 
-    modules::queue();
+    // modules::queue();
 
-    my_module::file_io();
+    // my_module::file_io();
+
+    my_module::regexp();
 }

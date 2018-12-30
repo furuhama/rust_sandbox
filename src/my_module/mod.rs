@@ -37,6 +37,7 @@ pub use self::existential::existential;
 pub use self::concurrent::concurrent;
 pub use self::concurrent::concurrent_with_channel;
 pub use self::file_io::file_io;
+pub use self::regexp::regexp;
 
 // call mod files
 mod basic_concepts;
@@ -70,3 +71,4 @@ mod macro_test;
 mod existential;
 mod concurrent;
 mod file_io;
+mod regexp;
