@@ -15,6 +15,7 @@ adder = { path = "adder" }
 prog_rust = { path = "prog_rust" }
 minigrep = { path = "minigrep" }
 failure = "*"
+regex = "*"
 
 [build-dependencies]
 
