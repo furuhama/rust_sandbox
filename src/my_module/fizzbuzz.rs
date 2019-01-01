@@ -11,7 +11,7 @@ pub fn fizzbuzz(n: i32) {
 }
 
 fn for_fizzbuzz(n: i32) {
-    for i in 1..n+1 {
+    for i in 1..=n {
         if i%15 == 0 {
             println!("fizzbuzz");
         } else if i % 3 == 0 {
@@ -25,7 +25,7 @@ fn for_fizzbuzz(n: i32) {
 }
 
 fn match_fizzbuzz(n: i32) {
-    for i in 1..n+1 {
+    for i in 1..=n {
         match i%15 {
             0 => println!("FizzBuzz"),
             3 | 6 | 9 | 12 => println!("Fizz"),
