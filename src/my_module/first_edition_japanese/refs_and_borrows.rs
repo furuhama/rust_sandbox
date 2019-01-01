@@ -19,8 +19,8 @@ pub fn references_and_borrowings() {
     println!("use &mut reference: {}", x);
 
     let num = &5;
-    let foo = Foo { x: num };
-    println!("foo's x is: {}", foo.x_value());
+    let f = Foo { x: num };
+    println!("foo's x is: {}", f.x_value());
 }
 
 // struct Foo has lifetime `a`
