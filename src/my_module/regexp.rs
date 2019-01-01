@@ -15,4 +15,9 @@ pub fn regexp() {
     println!("yaer: {}", &caps["year"]);
     println!("month: {}", &caps["month"]);
     println!("day: {}", &caps["day"]);
+
+    let re = Regex::new(r"ぇ").unwrap();
+    let res = re.find("ふぇぇ").unwrap();
+    println!("{:?}", res);
+    println!("{:?}", res.as_str());
 }
