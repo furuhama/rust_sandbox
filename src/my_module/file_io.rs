@@ -9,6 +9,6 @@ fn write_file() {
     let mut f = BufWriter::new(fs::File::create("test.txt").unwrap());
     for _ in 0 .. 100 {
         let b = b"test";
-        f.write(b).unwrap();
+        f.write_all(b).unwrap();
     }
 }

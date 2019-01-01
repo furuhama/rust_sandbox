@@ -34,7 +34,7 @@ fn server_start() -> io::Result<()> {
                 if n == 0 {
                     return Ok(());
                 } else {
-                    stream.write(&b[0..n])?;
+                    stream.write_all(&b[0..n])?;
                 }
             }
         });
