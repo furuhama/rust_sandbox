@@ -5,6 +5,7 @@ version = "0.1.0"
 authors = ["furuhama yusuke <yuuuuusuke0210@gmail.com>"]
 description = "My trial of `The Rust Programming Language - second edition`."
 license = "MIT"
+edition = "2018"
 
 [dependencies]
 
