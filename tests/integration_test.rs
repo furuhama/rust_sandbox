@@ -1,5 +1,3 @@
-extern crate hello_world;
-
 use hello_world::my_test;
 mod common;
 

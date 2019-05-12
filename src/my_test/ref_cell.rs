@@ -2,7 +2,7 @@
 
 #[cfg(test)]
 mod test {
-    use my_module::*;
+    use crate::my_module::*;
     use std::cell::RefCell;
 
     struct MockMessenger {

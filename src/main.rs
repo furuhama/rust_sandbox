@@ -1,8 +1,3 @@
-extern crate hello_world;
-extern crate adder;
-extern crate prog_rust;
-extern crate minigrep;
-
 #[allow(unused_imports)]
 use hello_world::my_module;
 #[allow(unused_imports)]
@@ -67,13 +62,9 @@ fn main() {
 
     // modules::basic_types();
 
-    // my_module::command();
-
-    // my_module::state();
-
     // modules::table();
 
-    // my_module::run_libc();
+    my_module::run_libc();
 
     // modules::references();
 
@@ -93,5 +84,5 @@ fn main() {
 
     // my_module::file_io();
 
-    my_module::regexp();
+    // my_module::regexp();
 }

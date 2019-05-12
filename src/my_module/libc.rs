@@ -1,5 +1,3 @@
-extern crate libc;
-
 extern "C" {
     fn plusone(x: libc::c_int) -> libc::c_int;
 }

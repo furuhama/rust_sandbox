@@ -2,7 +2,7 @@
 
 #[cfg(test)]
 mod tests {
-    use my_module;
+    use crate::my_module;
 
     #[test]
     fn it_works() {

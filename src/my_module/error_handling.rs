@@ -3,6 +3,7 @@ use std::io::{self, Read};
 use std::fs::File;
 // use std::io::ErrorKind;
 use std::num;
+use failure::Fail;
 
 pub fn error_handling() {
     // this returns a panic error

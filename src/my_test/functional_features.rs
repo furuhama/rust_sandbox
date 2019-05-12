@@ -2,7 +2,7 @@
 
 #[cfg(test)]
 mod test {
-    use my_module;
+    use crate::my_module;
 
     #[test]
     fn call_with_different_values() {

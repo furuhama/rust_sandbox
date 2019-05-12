@@ -11,9 +11,3 @@ pub mod my_module;
 /// main test module is `my_test`
 
 pub mod my_test;
-
-// using crates
-
-#[macro_use]
-extern crate failure;
-extern crate regex;
