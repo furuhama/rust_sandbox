@@ -85,4 +85,6 @@ fn main() {
     // my_module::file_io();
 
     // my_module::regexp();
+
+    my_module::cell();
 }
