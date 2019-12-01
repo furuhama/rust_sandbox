@@ -64,7 +64,7 @@ fn main() {
 
     // modules::table();
 
-    my_module::run_libc();
+    // my_module::run_libc();
 
     // modules::references();
 
@@ -86,5 +86,7 @@ fn main() {
 
     // my_module::regexp();
 
-    my_module::cell();
+    // my_module::cell();
+
+    my_module::closure();
 }

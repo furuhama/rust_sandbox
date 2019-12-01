@@ -39,6 +39,7 @@ pub use self::concurrent::concurrent_with_channel;
 pub use self::file_io::file_io;
 pub use self::regexp::regexp;
 pub use self::cell::cell;
+pub use self::closure::closure;
 
 // call mod files
 mod basic_concepts;
@@ -74,3 +75,4 @@ mod concurrent;
 mod file_io;
 mod regexp;
 mod cell;
+mod closure;
