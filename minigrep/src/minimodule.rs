@@ -69,7 +69,7 @@ pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a st
 }
 
 // extract logic fron main function
-fn run(config: Config) -> Result<(), Box<Error>> {
+fn run(config: Config) -> Result<(), Box<dyn Error>> {
     // try to open file which name is given as filename
     let mut f = File::open(config.filename)?;
 
