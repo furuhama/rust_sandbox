@@ -88,5 +88,7 @@ fn main() {
 
     // my_module::cell();
 
-    my_module::closure();
+    // my_module::closure();
+
+    my_module::async_sample();
 }

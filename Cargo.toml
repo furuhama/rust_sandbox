@@ -17,6 +17,7 @@ prog_rust = { path = "prog_rust" }
 minigrep = { path = "minigrep" }
 failure = "*"
 regex = "*"
+futures = { version = "0.3", features = ["compat"] }
 
 [build-dependencies]
 

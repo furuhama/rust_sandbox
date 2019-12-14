@@ -40,6 +40,7 @@ pub use self::file_io::file_io;
 pub use self::regexp::regexp;
 pub use self::cell::cell;
 pub use self::closure::closure;
+pub use self::async_sample::async_sample;
 
 // call mod files
 mod basic_concepts;
@@ -76,3 +77,4 @@ mod file_io;
 mod regexp;
 mod cell;
 mod closure;
+mod async_sample;
