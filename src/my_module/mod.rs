@@ -41,6 +41,7 @@ pub use self::regexp::regexp;
 pub use self::cell::cell;
 pub use self::closure::closure;
 pub use self::async_sample::async_sample;
+pub use self::read::read;
 
 // call mod files
 mod basic_concepts;
@@ -78,3 +79,4 @@ mod regexp;
 mod cell;
 mod closure;
 mod async_sample;
+mod read;
