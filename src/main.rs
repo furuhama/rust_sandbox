@@ -90,7 +90,7 @@ fn main() {
 
     // my_module::closure();
 
-    // my_module::async_sample();
+    my_module::async_sample();
 
-    my_module::read();
+    // my_module::read();
 }
